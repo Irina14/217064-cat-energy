@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <a class="header__logo-1 logo-1">
+        <img class="header__logo-image-1" src="#" width="33" height="38" alt="Логотип">
+      </a>
+      <a class="header__logo-2 logo-2">
+        <img class="header__logo-image-2" src="#" width="101" height="18" alt="Cat Energy">
+      </a>
+      <nav class="menu">
+        <button class="menu__open" type="button" aria-label="Открыть меню"></button>
+        <button class="menu__close" type="button" aria-label="Закрыть меню"></button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu__item menu__item--active">
+            <a class="menu__link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="page-main__title">Подбор программы</h1>
+
+      <section class="form">
+        <h2 class="visually-hidden">Анкета</h2>
+        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="form__questionnaire" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="form__about-cat">
+            <legend class="visually-hidden">Информация о коте</legend>
+            <div class="form__wrapper">
+              <label for="name-field">Имя:<sup>*</sup></label>
+              <input type="text" name="name" id="name-field">
+            </div>
+            <div class="form__wrapper">
+              <label for="weight-field">Вес (кг):<sup>*</sup></label>
+              <input type="text" name="weight" id="weight-field">
+            </div>
+            <div class="form__wrapper">
+              <label for="age-field">Возраст (лет):</label>
+              <input type="text" name="age" id="age-field">
+            </div>
+          </fieldset>
+
+
+        </form>
+
+      </section>
+
+    </main>
