@@ -1,9 +1,10 @@
 .contacts {
   margin-bottom: 24px;
   background-color: $grey;
-    &--index {
-      background-color: $white;
-    }
+
+  &--index {
+    background-color: $white;
+  }
 }
 
 .contacts__wrapper {
@@ -13,10 +14,10 @@
 }
 
 .contacts__text {
+  @include text-black;
   margin: 0;
   font-size: 16px;
   line-height: 20px;
-  @include text-black;
 }
 
 .contacts__address {

@@ -18,10 +18,10 @@
 }
 
 .additional-goods__caption {
-  font-size: 16px;
-  line-height: 16px;
   @include text-black-brown;
   @include default-title;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .additional-goods__desc {

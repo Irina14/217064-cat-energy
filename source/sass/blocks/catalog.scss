@@ -17,9 +17,9 @@
 
 .catalog__link-title,
 .catalog__slogan {
+  @include text-black;
   font-size: 16px;
   line-height: 20px;
-  @include text-black;
 }
 
 .catalog__desc,

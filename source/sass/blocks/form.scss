@@ -13,8 +13,8 @@
 }
 
 .form__label {
-  font-size: 16px;
   @include text-black-brown;
+  font-size: 16px;
 }
 
 .form__legend {
@@ -29,11 +29,12 @@
 
 .form__field,
 .form__textarea {
-    font: inherit;
-    font-size: 16px;
-      &::placeholder {
-        color: #444444;
-      }
+  font: inherit;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #444444;
+  }
 }
 
 .form__about-cat {

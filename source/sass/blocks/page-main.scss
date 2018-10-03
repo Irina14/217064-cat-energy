@@ -1,17 +1,18 @@
 .page-main__wrapper {
+  @include padding-mobile;
   min-height: 305px;
   margin-bottom: 135px;
   padding-top: 25px;
-  @include padding-mobile;
   text-align: center;
   background: $green url("../../img/\index-background-mobile@1x.jpg") no-repeat center top;
 }
 
 .page-main__title {
   @include title;
-    &--index {
-      color: $white;
-    }
+
+  &--index {
+    color: $white;
+  }
 }
 
 .page-main__slogan {
@@ -24,7 +25,7 @@
 
 .page-main__title--catalog,
 .page-main__title--form {
-  padding-top: 30px;
-  margin-bottom: 35px;
   @include padding-mobile;
+  margin-bottom: 35px;
+  padding-top: 30px;
 }
