@@ -1,0 +1,15 @@
+.contacts {
+  @include padding-mobile;
+  margin-bottom: 24px;
+}
+
+.contacts__text {
+  font-size: 16px;
+  line-height: 20px;
+  @include text-black;
+}
+
+.contacts__address {
+  line-height: 20px;
+}
+
