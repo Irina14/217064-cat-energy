@@ -1,0 +1,29 @@
+.page-main__wrapper {
+  min-height: 305px;
+  margin-bottom: 135px;
+  padding-top: 25px;
+  @include padding-mobile;
+  text-align: center;
+  background: $green url("../../img/\index-background-mobile@1x.jpg") no-repeat center top;
+}
+
+.page-main__title {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+}
+
+.page-main__title--index {
+  color: $white;
+}
+
+.page-main__slogan {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 14px;
+  color: $white;
+}
+
+
