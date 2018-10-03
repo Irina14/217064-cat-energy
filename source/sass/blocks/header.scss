@@ -1,1 +1,11 @@
+@mixin padding-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+.header {
+  padding-top: 11px;
+  padding-bottom: 16px;
+  @include padding-mobile;
+  background-color: #ffffff;
+}
