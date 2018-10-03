@@ -9,9 +9,20 @@
   list-style: none;
 }
 
+@mixin default-title {
+  margin: 0;
+  font-weight: 400;
+}
+
 @mixin text-black {
   font-family: $oswald;
   color: $black;
+  text-transform: uppercase;
+}
+
+@mixin text-black-brown {
+  font-family: $oswald;
+  color: $black-brown;
   text-transform: uppercase;
 }
 
@@ -20,5 +31,6 @@
   font-family: $oswald;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   color: $black;
 }

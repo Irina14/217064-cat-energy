@@ -23,4 +23,10 @@
   text-transform: uppercase;
 }
 
+.page-main__title--catalog,
+.page-main__title--form {
+  padding-top: 30px;
+  margin-bottom: 35px;
+  @include padding-mobile;
+}
 

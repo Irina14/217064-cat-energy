@@ -1,0 +1,52 @@
+.additional-goods {
+  @include padding-mobile;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.additional-goods__title {
+  font-family: $oswald;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black;
+  @include default-title;
+}
+
+.additional-goods__list {
+  @include default-list;
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 17px;
+}
+
+.additional-goods__caption {
+  font-size: 16px;
+  line-height: 16px;
+  @include text-black-brown;
+  @include default-title;
+}
+
+.additional-goods__desc {
+  line-height: 14px;
+}
+
+.additional-goods__price {
+  text-transform: uppercase;
+}
+
+.additional-goods__action {
+  min-height: 289px;
+  margin-top: 40px;
+  padding-top: 187px;
+  text-align: center;
+  background: $green url("../../img/gift-photo-mobile@1x.jpg") no-repeat center top;
+}
+
+.additional-goods__action-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+}
