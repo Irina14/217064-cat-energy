@@ -1,10 +1,9 @@
 .contacts {
   margin-bottom: 24px;
   background-color: $grey;
-}
-
-.contacts--index {
-  background-color: $white;
+    &--index {
+      background-color: $white;
+    }
 }
 
 .contacts__wrapper {

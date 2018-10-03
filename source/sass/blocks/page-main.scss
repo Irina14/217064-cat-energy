@@ -9,10 +9,9 @@
 
 .page-main__title {
   @include title;
-}
-
-.page-main__title--index {
-  color: $white;
+    &--index {
+      color: $white;
+    }
 }
 
 .page-main__slogan {
