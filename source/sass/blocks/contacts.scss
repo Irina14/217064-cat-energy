@@ -14,10 +14,8 @@
 }
 
 .contacts__text {
-  @include text-black;
+  @include text(16px, 20px, $black);
   margin: 0;
-  font-size: 16px;
-  line-height: 20px;
 }
 
 .contacts__address {

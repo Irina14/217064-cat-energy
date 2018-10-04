@@ -6,13 +6,11 @@
 }
 
 .example__title {
-  @include title;
+  @include title(36px, 36px);
 }
 
 .example__value {
-  @include text-black;
-  font-size: 24px;
-  line-height: 24px;
+  @include text(24px, 24px, $black);
 }
 
 .example__parameter {
@@ -21,15 +19,12 @@
 }
 
 .example__sum {
-  @include text-black;
-  line-height: 20px;
+  @include text(14px, 20px, $black);
   text-align: center;
 }
 
 .example__slider-button {
-  @include text-black;
-  font-size: 16px;
-  line-height: 20px;
+  @include text(16px, 20px, $black);
   background-color: transparent;
   border: none;
 }

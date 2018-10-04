@@ -14,9 +14,7 @@
 
 .programs__title {
   @include default-title;
-  @include text-black;
-  font-size: 24px;
-  line-height: 37px;
+  @include text(24px, 37px, $black);
 }
 
 .programs__desc {
@@ -24,7 +22,5 @@
 }
 
 .programs__link {
-  @include text-black;
-  font-size: 16px;
-  line-height: 16px;
+  @include text(16px, 16px, $black);
 }

@@ -8,7 +8,7 @@
 }
 
 .page-main__title {
-  @include title;
+  @include title(36px, 36px);
 
   &--index {
     color: $white;

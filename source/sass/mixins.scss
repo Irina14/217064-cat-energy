@@ -14,32 +14,19 @@
   font-weight: 400;
 }
 
-@mixin text-black {
+@mixin text($font-size, $line-height, $color) {
   font-family: $oswald;
-  color: $black;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
   text-transform: uppercase;
 }
 
-@mixin text-black-brown {
-  font-family: $oswald;
-  color: $black-brown;
-  text-transform: uppercase;
-}
-
-@mixin title {
+@mixin title($font-size, $line-height) {
   margin: 0;
   font-family: $oswald;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  color: $black;
-}
-
-@mixin title-small {
-  margin: 0;
-  font-family: $oswald;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: $font-size;
+  line-height: $line-height;
   font-weight: 400;
   color: $black;
 }

@@ -4,7 +4,7 @@
 }
 
 .form__text {
-  @include text-black;
+  @include text(14px, 18px, $black);
   margin-bottom: 38px;
 }
 
@@ -13,12 +13,11 @@
 }
 
 .form__label {
-  @include text-black-brown;
-  font-size: 16px;
+  @include text(16px, 18px, $black-brown);
 }
 
 .form__legend {
-  @include title-small;
+  @include title(24px, 24px);
 }
 
 .form__fieldset {
