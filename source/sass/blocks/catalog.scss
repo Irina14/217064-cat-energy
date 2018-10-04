@@ -1,0 +1,43 @@
+.catalog {
+  @include padding-mobile;
+}
+
+.catalog__list {
+  @include default-list;
+}
+
+.catalog__item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+}
+
+.catalog__title {
+  @include default-title;
+}
+
+.catalog__link-title,
+.catalog__slogan {
+  @include text(16px, 20px, $black);
+}
+
+.catalog__desc,
+.catalog__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog__button {
+  font-size: 16px;
+  line-height: 20px;
+
+  &--all {
+    color: #444444;
+    background-color: $grey;
+  }
+}
+
+.catalog__all {
+  padding-top: 80px;
+  padding-bottom: 24px;
+  text-align: center;
+}

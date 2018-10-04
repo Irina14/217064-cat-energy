@@ -1,0 +1,32 @@
+@mixin padding-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin default-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin default-title {
+  margin: 0;
+  font-weight: 400;
+}
+
+@mixin text($font-size, $line-height, $color) {
+  font-family: $oswald;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin title($font-size, $line-height) {
+  margin: 0;
+  font-family: $oswald;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  color: $black;
+}

@@ -1,0 +1,30 @@
+.example {
+  @include padding-mobile;
+  padding-top: 28px;
+  padding-bottom: 36px;
+  background-color: $grey;
+}
+
+.example__title {
+  @include title(36px, 36px);
+}
+
+.example__value {
+  @include text(24px, 24px, $black);
+}
+
+.example__parameter {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__sum {
+  @include text(14px, 20px, $black);
+  text-align: center;
+}
+
+.example__slider-button {
+  @include text(16px, 20px, $black);
+  background-color: transparent;
+  border: none;
+}

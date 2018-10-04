@@ -1,0 +1,31 @@
+.page-main__wrapper {
+  @include padding-mobile;
+  min-height: 305px;
+  margin-bottom: 135px;
+  padding-top: 25px;
+  text-align: center;
+  background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+}
+
+.page-main__title {
+  @include title(36px, 36px);
+
+  &--index {
+    color: $white;
+  }
+
+  &--catalog,
+  &--form {
+    @include padding-mobile;
+    margin-bottom: 35px;
+    padding-top: 30px;
+  }
+}
+
+.page-main__slogan {
+  margin: 0;
+  font-family: $oswald;
+  line-height: 14px;
+  color: $white;
+  text-transform: uppercase;
+}

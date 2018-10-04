@@ -1,0 +1,8 @@
+.advantages {
+  @include padding-mobile;
+  margin-bottom: 42px;
+}
+
+.advantages__title {
+  @include title(36px, 36px);
+}

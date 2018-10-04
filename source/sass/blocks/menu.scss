@@ -1,0 +1,12 @@
+.menu {
+  @include text(20px, 20px, $black);
+  font-weight: 500;
+}
+
+.menu__list {
+  @include default-list;
+}
+
+.menu__link {
+  color: $black;
+}

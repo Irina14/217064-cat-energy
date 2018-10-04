@@ -1,0 +1,64 @@
+.form {
+  @include padding-mobile;
+  margin-bottom: 33px;
+}
+
+.form__text {
+  @include text(14px, 18px, $black);
+  margin-bottom: 38px;
+}
+
+.form__questionnaire {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  @include text(16px, 18px, $black-brown);
+}
+
+.form__legend {
+  @include title(24px, 24px);
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__field,
+.form__textarea {
+  font: inherit;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #444444;
+  }
+}
+
+.form__about-cat {
+  margin-bottom: 50px;
+}
+
+.form__task {
+  margin-bottom: 55px;
+}
+
+.form__contacts,
+.form__comment {
+  margin-bottom: 28px;
+}
+
+.form__additionally {
+  margin-bottom: 40px;
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+}
+
+.form__notice {
+  line-height: 16px;
+}

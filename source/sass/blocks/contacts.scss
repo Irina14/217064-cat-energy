@@ -1,0 +1,24 @@
+.contacts {
+  margin-bottom: 24px;
+  background-color: $grey;
+
+  &--index {
+    background-color: $white;
+  }
+}
+
+.contacts__wrapper {
+  @include padding-mobile;
+  padding-top: 28px;
+  padding-bottom: 25px;
+}
+
+.contacts__text {
+  @include text(16px, 20px, $black);
+  margin: 0;
+}
+
+.contacts__address {
+  margin: 0;
+  line-height: 20px;
+}
