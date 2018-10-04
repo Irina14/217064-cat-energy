@@ -29,15 +29,15 @@
 .catalog__button {
   font-size: 16px;
   line-height: 20px;
+
+  &--all {
+    color: #444444;
+    background-color: $grey;
+  }
 }
 
 .catalog__all {
   padding-top: 80px;
   padding-bottom: 24px;
   text-align: center;
-}
-
-.catalog__button--all {
-  color: #444444;
-  background-color: $grey;
 }
