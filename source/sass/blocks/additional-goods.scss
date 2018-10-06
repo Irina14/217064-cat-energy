@@ -9,7 +9,7 @@
 }
 
 .additional-goods__list {
-  @include default-list;
+  @include reset-list;
 }
 
 .additional-goods__item {
@@ -19,7 +19,7 @@
 
 .additional-goods__caption {
   @include text(16px, 16px, $black-brown);
-  @include default-title;
+  @include reset-title;
 }
 
 .additional-goods__desc {

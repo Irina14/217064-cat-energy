@@ -3,7 +3,7 @@
 }
 
 .catalog__list {
-  @include default-list;
+  @include reset-list;
 }
 
 .catalog__item {
@@ -12,7 +12,7 @@
 }
 
 .catalog__title {
-  @include default-title;
+  @include reset-title;
 }
 
 .catalog__link-title,

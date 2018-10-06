@@ -25,6 +25,6 @@
 
 .example__slider-button {
   @include text(16px, 20px, $black);
-  background-color: transparent;
-  border: none;
+  @include reset-button;
 }
+

@@ -4,9 +4,67 @@
 }
 
 .menu__list {
-  @include default-list;
+  @include reset-list;
+}
+
+.menu__item {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid $grey;
+
+  &:first-child {
+    border-top: 1px solid $grey;
+  }
 }
 
 .menu__link {
   color: $black;
+}
+
+.menu__open,
+.menu__close {
+  position: absolute;
+  @include reset-button;
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+    @include text(18px, 25px, $black-brown);
+    width: 500px;
+    font-weight: 400;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+  }
+
+  .menu__item {
+    padding: 0;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    @include text(20px, 25px, $black-brown);
+    width: 610px;
+  }
+
+  .menu__item {
+
+    &:not(:last-child) {
+      margin-right: 37px;
+    }
+  }
 }

@@ -3,15 +3,35 @@
   padding-right: 20px;
 }
 
-@mixin default-list {
+@mixin padding-tablet {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin padding-desktop {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+@mixin container($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+@mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@mixin default-title {
+@mixin reset-title {
   margin: 0;
   font-weight: 400;
+}
+
+@mixin reset-button {
+  background-color: transparent;
+  border: none;
 }
 
 @mixin text($font-size, $line-height, $color) {
