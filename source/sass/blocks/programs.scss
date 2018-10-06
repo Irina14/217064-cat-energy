@@ -1,6 +1,7 @@
 .programs {
+  @include container(320px);
   @include padding-mobile;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .programs__list {
@@ -10,17 +11,87 @@
 .programs__item {
   padding: 22px 20px 20px;
   background-color: $grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .programs__title {
   @include reset-title;
   @include text(24px, 37px, $black);
+  margin-bottom: 30px;
 }
 
 .programs__desc {
   margin: 0;
+  margin-bottom: 40px;
 }
 
 .programs__link {
   @include text(16px, 16px, $black);
+}
+
+@media (min-width: $tablet-width) {
+  .programs {
+    @include container($tablet-width);
+    @include padding-tablet;
+    margin-bottom: 50px;
+  }
+
+  .programs__item {
+    padding: 75px 27px 58px 52px;
+    background-color: $grey;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .programs__title {
+    @include text(36px, 37px, $black);
+    margin-bottom: 25px;
+  }
+
+  .programs__desc {
+    margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs__link {
+    @include text(20px, 20px, $black);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    @include container($desktop-width);
+    @include padding-desktop;
+    margin-bottom: 75px;
+  }
+
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+    padding: 41px 52px 60px 52px;
+    background-color: $grey;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .programs__title {
+    margin-bottom: 75px;
+  }
+
+  .programs__desc {
+    margin-bottom: 30px;
+  }
 }
