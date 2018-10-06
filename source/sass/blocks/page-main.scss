@@ -1,10 +1,27 @@
+.page-main__header {
+  @include container(320px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
 .page-main__wrapper {
   @include padding-mobile;
-  min-height: 305px;
-  margin-bottom: 135px;
   padding-top: 25px;
   text-align: center;
   background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+  min-height: 305px;
+}
+
+.page-main__image {
+  margin-top: -138px;
+  order: 1;
+}
+
+.page-main__button {
+  min-width: 280px;
+  order: 2;
 }
 
 .page-main__title {
@@ -23,9 +40,50 @@
 }
 
 .page-main__slogan {
+  @include text(14px, 14px, $white);
   margin: 0;
-  font-family: $oswald;
-  line-height: 14px;
-  color: $white;
-  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__header {
+    @include container($tablet-width);
+    @include padding-tablet;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .page-main__wrapper {
+    min-height: 0;
+    padding-left: 90px;
+    padding-right: 0;
+    padding-top: 30px;
+    text-align: left;
+    background: none;
+  }
+
+  .page-main__title {
+    @include title(60px, 60px);
+    margin-bottom: 30px;
+  }
+
+  .page-main__slogan {
+    @include text(20px, 20px, $black);
+    margin-bottom: 45px;
+  }
+
+  .page-main__image {
+    position: relative;
+    margin-top: -60px;
+    order: 0;
+  }
+
+  .page-main__button {
+    position: relative;
+    z-index: 2;
+    order: 0;
+    min-width: 245px;
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -26,5 +26,6 @@
 .example__slider-button {
   @include text(16px, 20px, $black);
   @include reset-button;
+  min-width: 280px;
 }
 
