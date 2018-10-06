@@ -57,6 +57,8 @@
 @media (min-width: $desktop-width) {
   .menu {
     @include text(20px, 25px, $white);
+    position: relative;
+    z-index: 2;
     width: 610px;
   }
 
