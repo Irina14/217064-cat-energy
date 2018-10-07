@@ -56,13 +56,17 @@
 
 @media (min-width: $desktop-width) {
   .menu {
-    @include text(20px, 25px, $white);
+    @include text(20px, 25px, $black);
     position: relative;
     z-index: 2;
     width: 610px;
+
+    &--index {
+      color: $white;
+    }
   }
 
-  .menu__link {
+  .menu__link--index {
     color: $white;
   }
 

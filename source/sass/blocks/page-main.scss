@@ -38,9 +38,18 @@
 
   &--catalog,
   &--form {
+    @include container(320px);
     @include padding-mobile;
-    margin-bottom: 35px;
     padding-top: 30px;
+  }
+
+  &--catalog {
+    padding-bottom: 35px;
+    border-bottom: 1px solid $grey;
+  }
+
+  &--form {
+    margin-bottom: 28px;
   }
 }
 
@@ -74,6 +83,16 @@
   .page-main__title {
     @include title(60px, 60px);
     margin-bottom: 30px;
+
+    &--catalog,
+    &--form {
+      @include container($tablet-width);
+      @include padding-tablet;
+    }
+
+    &--catalog {
+      border-bottom: none;
+    }
   }
 
   .page-main__slogan {
@@ -111,6 +130,12 @@
 
   .page-main__title {
     margin-bottom: 35px;
+
+    &--catalog,
+    &--form {
+      @include container($desktop-width);
+      @include padding-desktop;
+    }
   }
 
   .page-main__slogan {
