@@ -1,11 +1,14 @@
 .additional-goods {
+  @include container(320px);
   @include padding-mobile;
-  padding-top: 30px;
   padding-bottom: 35px;
 }
 
 .additional-goods__title {
   @include title(24px, 24px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .additional-goods__list {
@@ -15,6 +18,7 @@
 .additional-goods__item {
   padding-top: 13px;
   padding-bottom: 17px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .additional-goods__caption {
@@ -23,6 +27,7 @@
 }
 
 .additional-goods__desc {
+  margin: 0;
   line-height: 14px;
 }
 
@@ -31,7 +36,7 @@
 }
 
 .additional-goods__action {
-  min-height: 289px;
+  height: 289px;
   margin-top: 40px;
   padding-top: 187px;
   text-align: center;
@@ -39,8 +44,122 @@
 }
 
 .additional-goods__action-text {
-  margin: 0;
+  width: 180px;
+  margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
   color: $white;
+}
+
+.additional-goods__button {
+  min-width: 280px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .additional-goods {
+    @include container($tablet-width);
+    @include padding-tablet;
+    padding-bottom: 76px;
+  }
+
+  .additional-goods__title {
+    @include title(36px, 36px);
+    padding-top: 15px;
+    padding-bottom: 75px;
+    border-bottom: none;
+  }
+
+  .additional-goods__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -1px;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-top: 24px;
+    padding-bottom: 26px;
+    border: 1px solid #cdcdcd;
+  }
+
+  .additional-goods__caption {
+    @include text(20px, 20px, $black-brown);
+    margin-bottom: 24px;
+  }
+
+  .additional-goods__desc {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-goods__action {
+    height: 200px;
+    margin-top: 70px;
+    padding-top: 70px;
+    padding-left: 250px;
+    text-align: left;
+    background: $green url("../img/gift-photo-tablet@1x.jpg") no-repeat center top;
+  }
+
+  .additional-goods__button {
+    min-width: 632px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-goods {
+    @include container($desktop-width);
+    @include padding-desktop;
+    padding-bottom: 86px;
+  }
+
+  .additional-goods__title {
+    @include title(36px, 36px);
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  .additional-goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-goods__list {
+    width: 895px;
+  }
+
+  .additional-goods__action {
+    width: 245px;
+    height: 289px;
+    margin-top: 0;
+    padding-top: 185px;
+    padding-left: 0;
+    text-align: center;
+    background: $green url("../img/gift-photo-desktop@1x.jpg") no-repeat center top;
+  }
+
+  .additional-goods__item {
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    border-right: none;
+    border-left: none;
+  }
+
+  .additional-goods__caption {
+    margin-bottom: 0;
+  }
+
+  .additional-goods__desc {
+    margin-bottom: 0;
+  }
+
+  .additional-goods__button {
+    min-width: 245px;
+  }
 }
