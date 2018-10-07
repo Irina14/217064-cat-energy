@@ -1,6 +1,5 @@
 .contacts {
   @include container(320px);
-  margin-bottom: 24px;
   background-color: $grey;
 
   &--index {
@@ -32,7 +31,6 @@
 @media (min-width: $tablet-width) {
   .contacts {
     @include container($tablet-width);
-    margin-bottom: 0;
   }
 
   .contacts__wrapper {
