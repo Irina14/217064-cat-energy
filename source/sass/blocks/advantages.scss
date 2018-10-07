@@ -48,7 +48,7 @@
   .advantages {
     @include container($desktop-width);
     @include padding-desktop;
-    margin-bottom: 34px;
+    margin-bottom: 26px;
   }
 
   .advantages__list {
@@ -57,7 +57,8 @@
 
   .advantages__item {
     width: 245px;
-    min-height: 250px;
+    min-height: 230px;
+    margin-bottom: 0;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
