@@ -93,6 +93,10 @@
     &--catalog {
       border-bottom: none;
     }
+
+    &--form {
+      margin-bottom: 50px;
+    }
   }
 
   .page-main__slogan {
@@ -135,6 +139,10 @@
     &--form {
       @include container($desktop-width);
       @include padding-desktop;
+    }
+
+    &--form {
+      margin-bottom: 50px;
     }
   }
 
