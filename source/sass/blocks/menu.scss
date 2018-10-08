@@ -23,8 +23,8 @@
 
 .menu__open,
 .menu__close {
-  position: absolute;
   @include reset-button;
+  position: absolute;
 }
 
 @media (min-width: $tablet-width) {
@@ -71,7 +71,6 @@
   }
 
   .menu__item {
-
     &:not(:last-child) {
       margin-right: 30px;
     }

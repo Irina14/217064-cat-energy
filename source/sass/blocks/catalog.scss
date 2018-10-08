@@ -44,7 +44,7 @@
 }
 
 .catalog__slogan,
-.catalog__text  {
+.catalog__text {
   @include padding-mobile;
 }
 
@@ -110,7 +110,7 @@
   }
 
   .catalog__slogan,
-  .catalog__text  {
+  .catalog__text {
     width: 183px;
     margin: 0 auto;
     padding-left: 0;
