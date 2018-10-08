@@ -88,14 +88,12 @@
     &--form {
       @include container($tablet-width);
       @include padding-tablet;
+      margin-bottom: 50px;
     }
 
     &--catalog {
+      padding-bottom: 0;
       border-bottom: none;
-    }
-
-    &--form {
-      margin-bottom: 50px;
     }
   }
 
@@ -139,10 +137,7 @@
     &--form {
       @include container($desktop-width);
       @include padding-desktop;
-    }
-
-    &--form {
-      margin-bottom: 50px;
+      margin-bottom: 52px;
     }
   }
 

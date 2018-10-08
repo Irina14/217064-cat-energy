@@ -8,7 +8,7 @@
   @include title(24px, 24px);
   padding-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .additional-goods__list {
@@ -18,7 +18,7 @@
 .additional-goods__item {
   padding-top: 13px;
   padding-bottom: 17px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .additional-goods__caption {
@@ -79,7 +79,7 @@
     padding-left: 38px;
     padding-top: 24px;
     padding-bottom: 26px;
-    border: 1px solid #cdcdcd;
+    border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
   .additional-goods__caption {
@@ -145,8 +145,8 @@
     padding-left: 0;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-top: 1px solid #cdcdcd;
-    border-bottom: 1px solid #cdcdcd;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
     border-right: none;
     border-left: none;
   }
