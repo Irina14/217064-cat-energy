@@ -1,5 +1,5 @@
 .additional-goods {
-  @include container(320px);
+  @include container($mobile-width);
   @include padding-mobile;
   padding-bottom: 35px;
 }
@@ -75,10 +75,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -1px;
-    padding-right: 38px;
-    padding-left: 38px;
-    padding-top: 24px;
-    padding-bottom: 26px;
+    padding: 24px 38px 26px 38px;
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
@@ -141,10 +138,7 @@
 
   .additional-goods__item {
     align-items: center;
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0 16px;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
     border-right: none;

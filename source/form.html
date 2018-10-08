@@ -10,8 +10,7 @@
 
     <header class="header">
       <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image" src="#" width="33" height="38" alt="Логотип">
-        <img class="header__logo-text" src="#" width="101" height="18" alt="Cat Energy">
+        <img class="header__logo-image" src="img\logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
       </a>
       <nav class="menu">
         <button class="menu__open" type="button" aria-label="Открыть меню"></button>
@@ -39,7 +38,7 @@
         <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="form__questionnaire" action="https://echo.htmlacademy.ru" method="get">
           <div class="form__wrapper-info-cat">
-            <fieldset class="form__field-group form__about-cat">
+            <fieldset class="form__field-group form__field-group--about-cat">
               <legend class="visually-hidden">Информация о коте</legend>
               <div class="form__wrapper">
                 <label class="form__label" for="nickname-field">Имя:<sup>*</sup></label>
@@ -54,7 +53,7 @@
                 <input class="form__field" type="text" name="age" id="age-field" placeholder="7">
               </div>
             </fieldset>
-            <fieldset class="form__field-group form__task">
+            <fieldset class="form__field-group form__field-group--task">
               <legend class="visually-hidden">Ваша цель</legend>
               <div class="form__wrapper">
                 <input class="visually-hidden" type="radio" name="task" id="task-1" value="Похудение" checked>
@@ -70,7 +69,7 @@
               </div>
             </fieldset>
           </div>
-          <fieldset class="form__field-group form__contacts">
+          <fieldset class="form__field-group form__field-group--contacts">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <div class="form__contacts-content">
               <div class="form__wrapper form__wrapper--contacts">
@@ -89,7 +88,7 @@
             <label class="form__legend" for="comment-field">Комментарий</label>
             <textarea class="form__textarea" name="comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-          <fieldset class="form__field-group form__additionally">
+          <fieldset class="form__field-group form__field-group--additionally">
             <legend class="form__legend">Дополнительно</legend>
             <div class="form__additionally-content">
               <div class="form__wrapper form__wrapper--additionally">
@@ -129,31 +128,31 @@
 
     <footer class="footer">
       <a class="footer__logo logo" href="index.html">
-        <img class="footer__logo-text" src="#" width="128" height="24" alt="Cat Energy">
+        <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
-      <div class="footer__social">
-        <ul class="social">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#" aria-label="Мы в Вконтакте">Вконтакте
-            <!-- svg-картинка -->
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--inst" href="#" aria-label="Мы в Инстаграме">Инстаграм
-            <!-- svg-картинка -->
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="#" aria-label="Мы в Фейсбуке">Фейсбук
-            <!-- svg-картинка -->
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" aria-label="Мы в Вконтакте">Вконтакте
+          <!-- svg-картинка -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#" aria-label="Мы в Инстаграме">Инстаграм
+          <!-- svg-картинка -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" aria-label="Мы в Фейсбуке">Фейсбук
+          <!-- svg-картинка -->
+          </a>
+        </li>
+      </ul>
       <div class="footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип
-          <!-- svg-картинка -->
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
+            <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+          </svg>
         </a>
       </div>
     </footer>

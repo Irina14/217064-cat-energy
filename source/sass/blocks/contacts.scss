@@ -1,5 +1,5 @@
 .contacts {
-  @include container(320px);
+  @include container($mobile-width);
   background-color: $grey;
 
   &--index {

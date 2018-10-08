@@ -1,5 +1,5 @@
 .header {
-  @include container(320px);
+  @include container($mobile-width);
 }
 
 .header__logo-wrapper {

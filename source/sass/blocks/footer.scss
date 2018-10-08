@@ -1,5 +1,5 @@
 .footer {
-  @include container(320px);
+  @include container($mobile-width);
   @include padding-mobile;
   display: flex;
   flex-direction: column;

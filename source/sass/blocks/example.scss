@@ -1,5 +1,5 @@
 .example {
-  @include container(320px);
+  @include container($mobile-width);
   @include padding-mobile;
   padding-top: 28px;
   padding-bottom: 36px;

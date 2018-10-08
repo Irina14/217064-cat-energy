@@ -1,5 +1,5 @@
 .programs {
-  @include container(320px);
+  @include container($mobile-width);
   @include padding-mobile;
   margin-bottom: 30px;
 }
