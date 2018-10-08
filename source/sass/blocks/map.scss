@@ -2,3 +2,17 @@
   height: 362px;
   background: $grey url("../img/bg-map-mobile@1x.png") no-repeat center top;
 }
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 396px;
+    background: $grey url("../img/bg-map-tablet@1x.png") no-repeat center top;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 400px;
+    background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center top;
+  }
+}

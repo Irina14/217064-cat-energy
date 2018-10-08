@@ -1,18 +1,35 @@
 .catalog {
-  @include padding-mobile;
+  @include container($mobile-width);
 }
 
 .catalog__list {
-  @include default-list;
+  @include reset-list;
 }
 
 .catalog__item {
   padding-top: 22px;
   padding-bottom: 24px;
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+
+  &--all {
+    padding-top: 80px;
+    padding-bottom: 24px;
+  }
+}
+
+.catalog__wrapper {
+  @include padding-mobile;
+  display: flex;
+}
+
+.catalog__link-image,
+.catalog__info {
+  width: 140px;
 }
 
 .catalog__title {
-  @include default-title;
+  @include reset-title;
 }
 
 .catalog__link-title,
@@ -26,7 +43,13 @@
   line-height: 16px;
 }
 
+.catalog__slogan,
+.catalog__text {
+  @include padding-mobile;
+}
+
 .catalog__button {
+  min-width: 280px;
   font-size: 16px;
   line-height: 20px;
 
@@ -36,8 +59,89 @@
   }
 }
 
-.catalog__all {
-  padding-top: 80px;
-  padding-bottom: 24px;
-  text-align: center;
+@media (min-width: $tablet-width) {
+  .catalog {
+    @include container($tablet-width);
+    @include padding-tablet;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    width: 324px;
+    min-height: 431px;
+    margin-bottom: 55px;
+    padding-top: 160px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+    background-color: $grey;
+    border-bottom: none;
+
+    &--all {
+      padding-top: 160px;
+      padding-bottom: 40px;
+      background-color: $white;
+      border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+  }
+
+  .catalog__wrapper {
+    display: block;
+  }
+
+  .catalog__link-image,
+  .catalog__info {
+    width: auto;
+  }
+
+  .catalog__link-title,
+  .catalog__slogan {
+    @include text(20px, 20px, $black);
+  }
+
+  .catalog__desc,
+  .catalog__text {
+    font-size: 16px;
+  }
+
+  .catalog__slogan,
+  .catalog__text {
+    width: 183px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .catalog__button {
+    min-width: 249px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    @include container($desktop-width);
+    @include padding-desktop;
+  }
+
+  .catalog__list {
+    justify-content: flex-start;
+  }
+
+  .catalog__item {
+    width: 245px;
+    margin-bottom: 60px;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 80px;
+    }
+  }
+
+  .catalog__button {
+    min-width: 169px;
+  }
 }

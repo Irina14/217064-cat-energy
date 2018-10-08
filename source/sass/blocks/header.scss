@@ -1,5 +1,49 @@
 .header {
+  @include container($mobile-width);
+}
+
+.header__logo-wrapper {
   @include padding-mobile;
   padding-top: 11px;
   padding-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    @include container($tablet-width);
+    @include padding-tablet;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header__logo-wrapper {
+    width: 192px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    @include container($desktop-width);
+    @include padding-desktop;
+    position: relative;
+    padding-top: 54px;
+    padding-bottom: 28px;
+  }
+
+  .header__logo-wrapper {
+    width: 245px;
+  }
+
+  .header__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 720px;
+    height: 696px;
+    background: $green url("../img/index-background-desktop@1x.jpg") no-repeat;
+  }
 }
