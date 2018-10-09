@@ -1,11 +1,17 @@
 .header {
   @include container($mobile-width);
+  position: relative;
 }
 
 .header__logo-wrapper {
   @include padding-mobile;
   padding-top: 11px;
   padding-bottom: 16px;
+}
+
+.header__logo-image {
+  width: 191px;
+  height: 38px;
 }
 
 @media (min-width: $tablet-width) {
@@ -22,6 +28,11 @@
     width: 192px;
     padding: 0;
   }
+
+  .header__logo-image {
+    width: 173px;
+    height: 58px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -35,6 +46,11 @@
 
   .header__logo-wrapper {
     width: 245px;
+  }
+
+  .header__logo-image {
+    width: 202px;
+    height: 59px;
   }
 
   .header__background {
