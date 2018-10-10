@@ -1,6 +1,8 @@
 .header {
   @include container($mobile-width);
   position: relative;
+  margin-top: -1px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .header__logo-wrapper {
@@ -19,7 +21,7 @@
     @include container($tablet-width);
     @include padding-tablet;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding-top: 24px;
     padding-bottom: 24px;
   }
