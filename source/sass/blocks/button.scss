@@ -4,5 +4,15 @@
   color: $white;
   text-transform: uppercase;
   text-align: center;
-  background: $green;
+  background-color: $green;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: #5eaa2f;
+  }
 }

@@ -30,6 +30,7 @@
 .page-main__button {
   min-width: 280px;
   margin-top: 3px;
+  padding: 11px;
 }
 
 .page-main__title {
@@ -131,7 +132,7 @@
   .page-main__header {
     @include container($desktop-width);
     @include padding-desktop;
-    margin-bottom: 170px;
+    margin-bottom: 135px;
   }
 
   .page-main__wrapper-text {
