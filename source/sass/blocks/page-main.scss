@@ -8,7 +8,7 @@
 
 .page-main__wrapper-text {
   @include padding-mobile;
-  padding-top: 25px;
+  padding-top: 26px;
   text-align: center;
   background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
   min-height: 305px;
@@ -22,11 +22,14 @@
 
 .page-main__image {
   order: -1;
-  margin-top: -138px;
+  width: 280px;
+  height: 271px;
+  margin-top: -139px;
 }
 
 .page-main__button {
   min-width: 280px;
+  margin-top: 3px;
 }
 
 .page-main__title {
@@ -34,6 +37,7 @@
 
   &--index {
     color: $white;
+    margin-bottom: 25px;
   }
 
   &--catalog,
@@ -71,18 +75,19 @@
     padding-left: 90px;
     padding-right: 0;
     padding-top: 30px;
+    margin-bottom: 48px;
     text-align: left;
     background: none;
   }
 
   .page-main__wrapper-desc {
     align-items: flex-start;
-    padding-left: 90px;
   }
 
   .page-main__title {
     @include title(60px, 60px);
-    margin-bottom: 30px;
+    width: 487px;
+    margin-bottom: 41px;
 
     &--catalog,
     &--form {
@@ -99,19 +104,24 @@
 
   .page-main__slogan {
     @include text(20px, 20px, $black);
-    margin-bottom: 45px;
   }
 
   .page-main__image {
     position: relative;
-    margin-top: -60px;
     order: 0;
+    width: 709px;
+    height: 609px;
+    margin-top: -80px;
+
   }
 
   .page-main__button {
     position: relative;
     z-index: 2;
     min-width: 245px;
+    margin-top: 0;
+    margin-left: 90px;
+    padding: 16px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -126,23 +136,18 @@
 
   .page-main__wrapper-text {
     width: 550px;
+    margin-bottom: 53px;
     padding-left: 80px;
     padding-top: 75px;
   }
 
   .page-main__title {
-    margin-bottom: 35px;
-
     &--catalog,
     &--form {
       @include container($desktop-width);
       @include padding-desktop;
       margin-bottom: 52px;
     }
-  }
-
-  .page-main__slogan {
-    margin-bottom: 50px;
   }
 
   .page-main__wrapper-desc {
@@ -152,7 +157,13 @@
   }
 
   .page-main__image {
-    margin-top: -360px;
-    margin-left: 100px;
+    width: 552px;
+    height: 499px;
+    margin-top: -313px;
+    margin-left: 125px;
+  }
+
+  .page-main__button {
+    margin-left: 0;
   }
 }
