@@ -8,7 +8,9 @@
 }
 
 .menu__item {
-  padding: 20px;
+  @mixin padding-mobile;
+  padding-top: 22px;
+  padding-bottom: 23px;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
 
@@ -21,35 +23,51 @@
   color: $black;
 }
 
+.menu__toggle {
+  @include reset-button;
+  position: absolute;
+  right: 20px;
+  top: 27px;
+  width: 24px;
+  height: 18px;
+}
+
+.menu--closed .menu__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $black-brown;
+  box-shadow: 0 8px 0 0 $black-brown, 0 16px 0 0 $black-brown;
+}
+
+.menu--opened .menu__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/icon-close.svg") no-repeat;
+}
+
 @media (max-width: $mobile-width-only) {
-  .menu__toggle {
-    @include reset-button;
-    position: absolute;
-    right: 20px;
-    top: 23px;
-    width: 24px;
-    height: 18px;
+  .menu--closed .menu__list {
+    display: none;
   }
 
-  .menu--closed .menu__toggle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 2px;
-    background-color: $black-brown;
-    box-shadow: 0 8px 0 0 $black-brown, 0 16px 0 0 $black-brown;
+  .menu--opened .menu__list {
+    display: block;
   }
 
-  .menu--opened .menu__toggle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 3px;
-    width: 18px;
-    height: 18px;
-    background: url("../img/icon-close.svg") no-repeat;
+  .menu--nojs .menu__list {
+    display: block;
+  }
+
+  .menu--nojs .menu__toggle {
+    display: none;
   }
 }
 
