@@ -1,7 +1,7 @@
 .advantages {
   @include container($mobile-width);
   @include padding-mobile;
-  margin-bottom: 42px;
+  margin-bottom: 45px;
 }
 
 .advantages__list {
@@ -9,7 +9,53 @@
 }
 
 .advantages__item {
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 80px;
+  padding-top: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  &--advantage-1 {
+    &::after {
+      background: url("../img/advantage-leaf@1x.png") no-repeat;
+    }
+  }
+
+  &--advantage-2 {
+    &::after {
+      background: url("../img/advantage-powder@1x.png") no-repeat;
+    }
+  }
+
+  &--advantage-3 {
+    &::after {
+      background: url("../img/advantage-dining@1x.png") no-repeat;
+    }
+  }
+
+  &--advantage-4 {
+    &::after {
+      background: url("../img/advantage-clock@1x.png") no-repeat;
+    }
+  }
 }
 
 .advantages__title {
@@ -21,7 +67,11 @@
   .advantages {
     @include container($tablet-width);
     @include padding-tablet;
-    margin-bottom: 17px;
+  }
+
+  .advantages__title {
+    @include title(60px, 60px);
+    margin-bottom: 40px;
   }
 
   .advantages__list {
@@ -32,15 +82,37 @@
 
   .advantages__item {
     width: 324px;
-    min-height: 287px;
+    min-height: 257px;
     margin-bottom: 30px;
+    margin-top: 30px;
+    padding-left: 0;
+    padding-top: 113px;
     font-size: 16px;
     line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+    }
   }
 
-  .advantages__title {
-    @include title(60px, 60px);
-    margin-bottom: 70px;
+  .advantages__wrapper {
+    position: relative;
+    z-index: 2;
+    width: 250px;
+  }
+
+  .advantages__number {
+    @include text(281px, 281px, $grey);
+    position: absolute;
+    top: -40px;
+    left: 115px;
+    z-index: 1;
   }
 }
 
@@ -48,7 +120,10 @@
   .advantages {
     @include container($desktop-width);
     @include padding-desktop;
-    margin-bottom: 26px;
+  }
+
+  .advantages__title {
+    margin-bottom: 72px;
   }
 
   .advantages__list {
@@ -57,8 +132,7 @@
 
   .advantages__item {
     width: 245px;
-    min-height: 230px;
-    margin-bottom: 0;
+    margin-top: 0;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
