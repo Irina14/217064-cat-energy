@@ -22,10 +22,11 @@
 }
 
 .example__list {
+  @include reset-list;
+  width: 280px;
   position: relative;
   margin: 0 auto;
   margin-bottom: 18px;
-  border-collapse: collapse;
 
   &::before,
   &::after {
@@ -48,18 +49,19 @@
   }
 }
 
-.example__list td {
-  margin-right: 32px;
-  text-align: center;
-}
-
-.example__list tr {
+.example__item {
   display: flex;
-  justify-content: space-around;
 
   &:first-child {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    justify-content: space-between;
   }
+}
+
+.example__value,
+.example__parameter {
+  margin: 0;
+  text-align: center;
 }
 
 .example__value {
@@ -71,9 +73,14 @@
   position: relative;
   z-index: 2;
   width: 87px;
+  margin-left: 18px;
   font-size: 12px;
   line-height: 12px;
   background-color: $grey;
+
+  &:first-child {
+    margin-right: 52px;
+  }
 }
 
 .example__sum {
@@ -151,16 +158,22 @@
   .example {
     @include container($tablet-width);
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding-top: 43px;
     padding-bottom: 66px;
     background-color: transparent;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .example__wrapper-desc {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 80px;
   }
 
   .example__title {
     @include title(60px, 60px);
     @include padding-tablet;
+    margin-bottom: 63px;
   }
 
   .example__wrapper-info {
@@ -170,8 +183,25 @@
   }
 
   .example__list {
-    width: 384px;
+    width: 367px;
     margin: 0;
+
+    &::before,
+    &::after {
+      top: -11px;
+      width: 163px;
+      height: 72px;
+    }
+
+    &::after {
+      left: 204px;
+    }
+  }
+
+  .example__item {
+    &:first-child {
+      margin-bottom: 11px;
+    }
   }
 
   .example__sum {
@@ -180,24 +210,50 @@
     text-align: right;
   }
 
+  .example__sum span {
+    display: block;
+    margin-top: 10px;
+  }
+
   .example__desc {
     @include padding-tablet;
+    width: 740px;
+    margin-bottom: 64px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .example__value {
     @include text(30px, 37px, $black);
+    width: 163px;
+    padding-top: 5px;
   }
 
   .example__parameter {
+    width: 142px;
+    margin-left: 24px;
     font-size: 14px;
     line-height: 14px;
+    background-color: $white;
+
+    &:first-child {
+      width: 114px;
+      margin-right: 53px;
+    }
+  }
+
+  .example__parameter br {
+    display: none;
   }
 
   .example__slider {
     position: relative;
     z-index: 2;
+  }
+
+  .example__slider-image {
+    width: 690px;
+    height: 517px;
   }
 
   .example__slider-button {
@@ -209,13 +265,13 @@
     z-index: 2;
   }
 
-  .example__background {
-    position: absolute;
-    bottom: 0;
-    background-color: $grey;
-    width: 100%;
-    height: 462px;
-  }
+  // .example__background {
+  //   position: absolute;
+  //   bottom: 0;
+  //   background-color: $grey;
+  //   width: 100%;
+  //   height: 462px;
+  // }
 }
 
 @media (min-width: $desktop-width) {
