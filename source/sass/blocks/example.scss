@@ -165,6 +165,14 @@
     margin-bottom: 63px;
   }
 
+  .example__desc {
+    @include padding-tablet;
+    width: 740px;
+    margin-bottom: 64px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .example__wrapper-info {
     @include padding-tablet;
     display: flex;
@@ -204,14 +212,6 @@
     margin-top: 10px;
   }
 
-  .example__desc {
-    @include padding-tablet;
-    width: 740px;
-    margin-bottom: 64px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
   .example__value {
     @include text(30px, 37px, $black);
     width: 163px;
@@ -241,6 +241,18 @@
     margin-bottom: 0;
   }
 
+  .example__slider-item {
+    position: relative;
+    height: 628px;
+
+    &:first-child {
+      position: absolute;
+      z-index: 3;
+      width: 384px;
+      overflow: hidden;
+    }
+  }
+
   .example__wrapper-image {
     background-color: $white;
 
@@ -263,29 +275,35 @@
     margin: 0 auto;
   }
 
-  .example__slider-item {
-    position: relative;
-    height: 628px;
+  .example__background-image {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 768px;
+    height: 462px;
 
-    &:first-child {
-      position: absolute;
-      z-index: 3;
-      width: 384px;
-      overflow: hidden;
+    &--before {
+      background-color: $grey;
     }
-  }
 
-  .example__slider-item--hidden {
-    display: block;
-  }
-
-  .example__slider-button {
-    @include text(20px, 20px, $black);
+    &--after {
+      background-color: #eaeaea;
+    }
   }
 
   .example__slider-bar {
     z-index: 2;
     margin-top: -94px;
+  }
+
+  .example__slider-button {
+    @include text(20px, 20px, $black);
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #b8b8b8;
+
+    &--before {
+      margin-right: 472px;
+    }
   }
 
   .example__slider-scale {
@@ -311,30 +329,8 @@
     box-sizing: content-box;
   }
 
-  .example__slider-button {
-    @include text(20px, 20px, $black);
-    padding-bottom: 6px;
-    border-bottom: 1px dotted #b8b8b8;
-
-    &--before {
-      margin-right: 472px;
-    }
-  }
-
-  .example__background-image {
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    width: 768px;
-    height: 462px;
-
-    &--before {
-      background-color: $grey;
-    }
-
-    &--after {
-      background-color: #eaeaea;
-    }
+  .example__slider-item--hidden {
+    display: block;
   }
 }
 
@@ -348,24 +344,15 @@
     border-top: none;
   }
 
+  .example__wrapper-desc {
+    width: 680px;
+    margin-bottom: 0;
+  }
+
   .example__title {
     @include padding-desktop;
-      margin-bottom: 145px;
-      padding-top: 24px;
-  }
-
-  .example__slider {
-    margin-top: -30px;
-  }
-
-  .example__wrapper-info {
-    @include padding-desktop;
-    display: block;
-  }
-
-  .example__sum {
-    width: 384px;
-    text-align: left;
+    margin-bottom: 145px;
+    padding-top: 24px;
   }
 
   .example__desc {
@@ -374,18 +361,23 @@
     margin-bottom: 80px;
   }
 
+  .example__wrapper-info {
+    @include padding-desktop;
+    display: block;
+  }
+
   .example__desc,
   .example__wrapper-info {
     position: relative;
     z-index: 2;
   }
 
-  .example__parameter {
-    background-color: $grey;
-  }
-
   .example__list {
     margin-bottom: 55px;
+  }
+
+  .example__parameter {
+    background-color: $grey;
   }
 
   .example__sum {
@@ -399,40 +391,6 @@
     margin-left: 60px;
   }
 
-  .example__wrapper-image {
-    &--before {
-      padding-left: 0;
-    }
-
-    &--after {
-      position: relative;
-      padding-left: 0;
-    }
-  }
-
-  .example__slider-item {
-    position: relative;
-
-    &:first-child {
-      position: absolute;
-      width: 365px;
-    }
-  }
-
-  .example__wrapper-desc {
-    width: 680px;
-    margin-bottom: 0;
-  }
-
-  .example__slider-bar {
-    margin-top: -72px;
-    margin-left: 40px;
-  }
-
-  .example__slider-scale {
-    left: 111px;
-  }
-
   .example__background-desc {
     position: absolute;
     z-index: 1;
@@ -442,8 +400,40 @@
     background-color: $grey;
   }
 
+  .example__slider {
+    margin-top: -30px;
+  }
+
+  .example__slider-item {
+    position: relative;
+    height: 650px;
+
+    &:first-child {
+      position: absolute;
+      width: 365px;
+    }
+  }
+
+  .example__wrapper-image {
+    &--before {
+      padding-left: 0;
+    }
+
+    &--after {
+      padding-left: 0;
+    }
+  }
+
   .example__background-image {
-    bottom: -23px;
+    bottom: 0;
     width: 760px;
+  }
+
+  .example__slider-bar {
+    margin-left: 40px;
+  }
+
+  .example__slider-scale {
+    left: 111px;
   }
 }
