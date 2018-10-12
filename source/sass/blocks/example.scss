@@ -310,6 +310,15 @@
     &--before {
       margin-right: 472px;
     }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .example__slider-scale {
@@ -333,6 +342,20 @@
       0px 2px 5px 0px rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     box-sizing: content-box;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow:
+        0 0 0 1px $dark-grey,
+        0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow:
+        0 0 0 2px $green,
+        0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    }
   }
 }
 

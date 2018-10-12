@@ -1,18 +1,44 @@
 .map {
+  position: relative;
   height: 362px;
-  background: $grey url("../img/bg-map-mobile@1x.png") no-repeat center top;
+  background: $grey url("../img/bg-map-mobile@1x.png") no-repeat center -38px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 129px;
+    width: 62px;
+    height: 53px;
+    background: url("../img/map-pin.png") no-repeat;
+    background-size: cover;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .map {
     height: 396px;
-    background: $grey url("../img/bg-map-tablet@1x.png") no-repeat center top;
+    background: $grey url("../img/bg-map-tablet@1x.png") no-repeat center -4px;
+
+    &::before {
+      top: 145px;
+      left: 324px;
+      width: 124px;
+      height: 106px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
     height: 400px;
-    background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center top;
+    background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center 8px;
+
+    &::before {
+      top: 158px;
+      left: 998px;
+      width: 113px;
+      height: 106px;
+    }
   }
 }
