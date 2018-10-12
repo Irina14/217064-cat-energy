@@ -8,15 +8,32 @@
 
 .footer__logo {
   padding-top: 39px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
 }
 
 .footer__social {
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 22px;
+  padding-bottom: 17px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.social__link {
+  &--vk svg {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--inst svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb svg {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 .footer__copyright {
@@ -30,6 +47,7 @@
     @include padding-tablet;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 59px;
     padding-bottom: 59px;
   }

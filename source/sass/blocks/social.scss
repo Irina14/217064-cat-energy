@@ -2,14 +2,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  width: 280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   list-style: none;
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
+
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 33px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 22px;
+  text-align: center;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $green;
+  }
+
+  &:active svg {
+    fill: rgba($green, 0.3);
   }
 }
