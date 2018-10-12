@@ -112,29 +112,19 @@
   left: 116px;
   width: 84px;
   height: 14px;
+  background-color: $white;
+  border: 1px solid $dark-grey;
+  border-radius: 6px;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 84px;
-    height: 14px;
-    background-color: $white;
-    border: 1px solid $dark-grey;
-    border-radius: 6px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    width: 35px;
-    height: 6px;
-    background-color: $green;
-    border-radius: 6px;
-  }
+.example__control {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 35px;
+  height: 6px;
+  background-color: $green;
+  border-radius: 6px;
 }
 
 .example__slider-button {
@@ -294,12 +284,44 @@
   }
 
   .example__slider-bar {
-    position: relative;
     z-index: 2;
-    margin-top: -100px;
+    margin-top: -94px;
   }
 
-  .example__background {
+  .example__slider-scale {
+    top: 7px;
+    left: 170px;
+    width: 428px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border: none;
+  }
+
+  .example__control {
+    top: -12px;
+    left: 198px;
+    width: 8px;
+    height: 8px;
+    background-color: $green;
+    border: 12px solid $white;
+    box-shadow:
+      0 0 0 1px $dark-grey,
+      0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+
+  .example__slider-button {
+    @include text(20px, 20px, $black);
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #b8b8b8;
+
+    &--before {
+      margin-right: 472px;
+    }
+  }
+
+  .example__background-image {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -319,14 +341,21 @@
 @media (min-width: $desktop-width) {
   .example {
     @include container($desktop-width);
+    position: relative;
     display: flex;
-    padding-bottom: 70px;
+    padding-top: 0;
+    padding-bottom: 60px;
+    border-top: none;
   }
 
   .example__title {
     @include padding-desktop;
-    margin-bottom: 130px;
-    padding-top: 55px;
+      margin-bottom: 145px;
+      padding-top: 24px;
+  }
+
+  .example__slider {
+    margin-top: -30px;
   }
 
   .example__wrapper-info {
@@ -341,11 +370,80 @@
 
   .example__desc {
     @include padding-desktop;
+    width: 655px;
+    margin-bottom: 80px;
+  }
+
+  .example__desc,
+  .example__wrapper-info {
+    position: relative;
+    z-index: 2;
+  }
+
+  .example__parameter {
+    background-color: $grey;
+  }
+
+  .example__list {
+    margin-bottom: 55px;
+  }
+
+  .example__sum {
+    width: 655px;
+    text-align: left;
+  }
+
+  .example__sum span {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 60px;
+  }
+
+  .example__wrapper-image {
+    &--before {
+      padding-left: 0;
+    }
+
+    &--after {
+      position: relative;
+      padding-left: 0;
+    }
+  }
+
+  .example__slider-item {
+    position: relative;
+
+    &:first-child {
+      position: absolute;
+      width: 365px;
+    }
   }
 
   .example__wrapper-desc {
     width: 680px;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 0;
+  }
+
+  .example__slider-bar {
+    margin-top: -72px;
+    margin-left: 40px;
+  }
+
+  .example__slider-scale {
+    left: 111px;
+  }
+
+  .example__background-desc {
+    position: absolute;
+    z-index: 1;
+    bottom: -7px;
+    height: 462px;
+    width: 100%;
+    background-color: $grey;
+  }
+
+  .example__background-image {
+    bottom: -23px;
+    width: 760px;
   }
 }
