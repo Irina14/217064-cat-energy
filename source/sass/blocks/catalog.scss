@@ -7,14 +7,19 @@
 }
 
 .catalog__item {
-  padding-top: 22px;
+  padding-top: 21px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #ededed;
+  border: 1px solid #ededed;
   text-align: center;
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
 
   &--all {
     padding-top: 80px;
     padding-bottom: 24px;
+    background: url("../img/icon-plus-mobile.svg") no-repeat center 26px;
   }
 }
 
@@ -28,8 +33,15 @@
   width: 140px;
 }
 
+.catalog__link-image {
+  margin-top: -20px;
+}
+
 .catalog__title {
   @include reset-title;
+  margin-bottom: 10px;
+  width: 85px;
+  text-align: left;
 }
 
 .catalog__link-title,
@@ -37,25 +49,58 @@
   @include text(16px, 20px, $black);
 }
 
-.catalog__desc,
-.catalog__text {
+.catalog__desc {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
+  border-collapse: collapse;
+}
+
+.catalog__desc tr {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.catalog__value--price {
+  text-transform: uppercase;
 }
 
 .catalog__slogan,
 .catalog__text {
   @include padding-mobile;
+  margin: 0;
+}
+
+.catalog__slogan {
+  margin-bottom: 7px;
+}
+
+.catalog__text {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .catalog__button {
   min-width: 280px;
+  margin-top: -3px;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
 
   &--all {
     color: #444444;
     background-color: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(#444444, 0.3);
+    background-color: #ebebeb;
   }
 }
 
