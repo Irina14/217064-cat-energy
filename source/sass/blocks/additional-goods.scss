@@ -168,17 +168,27 @@
 @media (min-width: $desktop-width) {
   .additional-goods {
     @include container($desktop-width);
-    @include padding-desktop;
     padding-bottom: 86px;
   }
 
   .additional-goods__title {
     @include title(36px, 36px);
-    padding-top: 10px;
-    padding-bottom: 70px;
+    padding-top: 71px;
+    padding-bottom: 82px;
+
+    &::after {
+      width: 957px;
+      margin-left: 34px;
+    }
+
+    &::before {
+      width: 70px;
+      margin-right: 40px;
+    }
   }
 
   .additional-goods__wrapper {
+    @include padding-desktop;
     display: flex;
     justify-content: space-between;
   }
@@ -199,7 +209,7 @@
 
   .additional-goods__item {
     align-items: center;
-    padding: 16px 0 16px;
+    padding: 16px 0 15px;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
     border-right: none;
@@ -207,14 +217,28 @@
   }
 
   .additional-goods__caption {
+    width: 285px;
     margin-bottom: 0;
   }
 
   .additional-goods__desc {
+    display: flex;
+    justify-content: space-between;
+    width: 286px;
     margin-bottom: 0;
+  }
+
+  .additional-goods__price {
+    margin-left: 0;
   }
 
   .additional-goods__button {
     min-width: 245px;
+  }
+
+  .additional-goods__action {
+    &::before {
+      left: 95px;
+    }
   }
 }
