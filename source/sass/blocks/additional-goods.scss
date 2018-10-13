@@ -1,14 +1,27 @@
 .additional-goods {
   @include container($mobile-width);
-  @include padding-mobile;
   padding-bottom: 35px;
 }
 
 .additional-goods__title {
   @include title(24px, 24px);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 30px 0 31px 20px;
+
+  &::after {
+    content: "";
+    width: 53px;
+    height: 3px;
+    margin-left: 21px;
+    background-color: $green;
+  }
+}
+
+.additional-goods__wrapper {
+  @include padding-mobile;
 }
 
 .additional-goods__list {
@@ -16,18 +29,26 @@
 }
 
 .additional-goods__item {
-  padding-top: 13px;
+  padding-top: 14px;
   padding-bottom: 17px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $dark-grey;
+
+  &:first-child {
+    border-top: 1px solid $dark-grey;
+  }
 }
 
 .additional-goods__caption {
   @include text(16px, 16px, $black-brown);
   @include reset-title;
+  margin-bottom: 13px;
 }
 
 .additional-goods__desc {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
+  margin-bottom: 15px;
   line-height: 14px;
 }
 
@@ -36,11 +57,22 @@
 }
 
 .additional-goods__action {
+  position: relative;
   height: 289px;
-  margin-top: 40px;
+  margin-top: 38px;
   padding-top: 187px;
   text-align: center;
   background: $green url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: calc(50% - 27.5px);
+    width: 55px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat;
+  }
 }
 
 .additional-goods__action-text {
@@ -53,8 +85,10 @@
 
 .additional-goods__button {
   min-width: 280px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
 }
-
 
 @media (min-width: $tablet-width) {
   .additional-goods {
