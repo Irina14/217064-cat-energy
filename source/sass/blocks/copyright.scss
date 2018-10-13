@@ -20,13 +20,17 @@
   height: 34px;
 }
 
+.copyright__logo path {
+  fill: #444444;
+}
+
 .copyright__logo {
-  &:hover svg,
-  &:focus svg {
+  &:hover path,
+  &:focus path {
     fill: $green;
   }
 
-  &:active svg {
+  &:active path {
     fill: rgba($green, 0.3);
   }
 }

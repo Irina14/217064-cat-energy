@@ -18,17 +18,40 @@
   }
 }
 
+.social__link path,
+.social__link circle {
+  fill: #444444;
+}
+
 .social__link {
   display: block;
   width: 22px;
   text-align: center;
 
-  &:hover svg,
-  &:focus svg {
+  &--vk svg {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--inst svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb svg {
+    width: 10px;
+    height: 19px;
+  }
+
+  &:hover path,
+  &:focus path,
+  &:hover circle,
+  &:focus circle {
     fill: $green;
   }
 
-  &:active svg {
+  &:active path,
+  &:active circle {
     fill: rgba($green, 0.3);
   }
 }
