@@ -6,16 +6,16 @@
 .additional-goods__title {
   @include title(24px, 24px);
   display: flex;
-  align-items: center;
-  flex-grow: 1;
-  flex-shrink: 0;
   padding: 30px 0 31px 20px;
 
   &::after {
     content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
     width: 53px;
     height: 3px;
     margin-left: 21px;
+    margin-top: 14px;
     background-color: $green;
   }
 }
@@ -103,17 +103,21 @@
     padding-left: 0;
     border-bottom: none;
 
-    &::after {
-      width: 327px;
-      margin-left: 36px;
-    }
-
     &::before {
       content: "";
       width: 30px;
       height: 3px;
       margin-right: 36px;
       background-color: $green;
+    }
+
+    &::after {
+      margin-left: 36px;
+    }
+
+    &::before,
+    &::after {
+      margin-top: 22px;
     }
   }
 
@@ -177,8 +181,7 @@
     padding-bottom: 82px;
 
     &::after {
-      width: 957px;
-      margin-left: 34px;
+      margin-left: 40px;
     }
 
     &::before {
