@@ -95,12 +95,16 @@
     &--form {
       @include container($tablet-width);
       @include padding-tablet;
-      margin-bottom: 50px;
     }
 
     &--catalog {
       padding-top: 32px;
       padding-bottom: 0;
+      margin-bottom: 165px;
+    }
+
+    &--form {
+      margin-bottom: 50px;
     }
   }
 

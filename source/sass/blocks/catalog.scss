@@ -37,6 +37,11 @@
   margin-top: -20px;
 }
 
+.catalog__image {
+  width: 140px;
+  height: 144px;
+}
+
 .catalog__title {
   @include reset-title;
   margin-bottom: 10px;
@@ -91,16 +96,16 @@
   &--all {
     color: #444444;
     background-color: $grey;
-  }
 
-  &:hover,
-  &:focus {
-    background-color: #ebebeb;
-  }
+    &:hover,
+    &:focus {
+      background-color: #ebebeb;
+    }
 
-  &:active {
-    color: rgba(#444444, 0.3);
-    background-color: #ebebeb;
+    &:active {
+      color: rgba(#444444, 0.3);
+      background-color: #ebebeb;
+    }
   }
 }
 
@@ -118,30 +123,64 @@
 
   .catalog__item {
     width: 324px;
-    min-height: 431px;
-    margin-bottom: 55px;
-    padding-top: 160px;
-    padding-left: 37px;
-    padding-right: 37px;
+    margin-top: 140px;
+    padding-top: 0;
     padding-bottom: 40px;
     background-color: $grey;
-    border-bottom: none;
+    border: none;
 
     &--all {
-      padding-top: 160px;
+      padding-top: 164px;
       padding-bottom: 40px;
-      background-color: $white;
+      background: $white url("../img/icon-plus.svg") no-repeat center 54px;
       border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+      margin-top: 0;
     }
   }
 
   .catalog__wrapper {
     display: block;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .catalog__link-image,
   .catalog__info {
     width: auto;
+  }
+
+  .catalog__image {
+    width: 324px;
+    height: 174px;
+  }
+
+  .catalog__link-image {
+    display: block;
+    margin-top: -47px;
+    margin-bottom: 32px;
+
+    &--big {
+      margin-top: -80px;
+    }
+
+    &--big img {
+      height: 208px;
+    }
+  }
+
+  .catalog__info {
+    margin-bottom: 33px;
+  }
+
+  .catalog__title {
+    margin: 0 auto 17px auto;
+    width: 140px;
+    line-height: 15px;
+    text-align: center;
   }
 
   .catalog__link-title,
@@ -154,16 +193,37 @@
     font-size: 16px;
   }
 
+  .catalog__desc {
+    margin: 0 auto;
+  }
+
+  .catalog__desc tr {
+    width: 252px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid $dark-grey;
+  }
+
   .catalog__slogan,
   .catalog__text {
-    width: 183px;
+    width: 175px;
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
   }
 
+  .catalog__slogan {
+    margin-bottom: 26px;
+  }
+
+  .catalog__text {
+    line-height: 18px;
+    margin-bottom: 86px;
+  }
+
   .catalog__button {
     min-width: 249px;
+    margin-top: 0;
   }
 }
 
