@@ -152,11 +152,15 @@
     &--form {
       @include container($desktop-width);
       @include padding-desktop;
-      margin-bottom: 52px;
     }
 
     &--catalog {
+      margin-bottom: 165px;
       padding-top: 44px;
+    }
+
+    &--form {
+      margin-bottom: 52px;
     }
   }
 
