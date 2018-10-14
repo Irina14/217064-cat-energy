@@ -11,8 +11,7 @@
 }
 
 .form__wrapper,
-.form__text,
-.form__legend {
+.form__text {
   @include padding-mobile;
 }
 
@@ -20,18 +19,64 @@
   display: flex;
   align-items: center;
 
-  &:not(:last-child) {
+  &--about-cat:not(:last-child),
+  &--contacts:not(:last-child) {
     margin-bottom: 14px;
+  }
+
+  &--task:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &--contacts {
+    position: relative;
   }
 }
 
 .form__label {
   @include text(16px, 18px, $black-brown);
   margin-right: 16px;
+
+  &--task {
+    position: relative;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px $dark-grey;
+      box-sizing: content-box;
+    }
+  }
+}
+
+.form__field-group--task input:checked + .form__label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $green;
+    border: 8px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $dark-grey;
+    box-sizing: content-box;
+  }
 }
 
 .form__label[for="weight-field"] {
   margin-right: 19px;
+}
+
+.form__field-group--contacts .form__label {
+  margin-right: 13px;
 }
 
 .form__label sup {
@@ -39,11 +84,25 @@
   font-size: 90%;
 }
 
-
 .form__legend {
   @include title(24px, 24px);
-  display: block;
-  margin-bottom: 30px;
+}
+
+.form__wrapper-legend {
+  display: flex;
+  margin-bottom: 34px;
+  padding-left: 20px;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 99px;
+    height: 3px;
+    margin-left: 20px;
+    margin-top: 14px;
+    background-color: $green;
+  }
 }
 
 .form__field-group {
@@ -53,9 +112,18 @@
   border: none;
 
   &--task {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-bottom: 28px;
+    padding-top: 26px;
+    padding-bottom: 27px;
     border: 1px solid #ededed;
+  }
+
+  &--about-cat {
+    margin-bottom: 22px;
+  }
+
+  &--contacts {
+    margin-bottom: 28px;
   }
 }
 
@@ -94,6 +162,37 @@
   &--error {
     padding: 9px 14px 9px;
   }
+
+  &--contacts {
+    padding-right: 40px;
+  }
+
+  &--contacts:focus + .form__icon path {
+    fill: $green;
+  }
+
+  &--error + .form__icon path {
+    fill: #ff8282;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  right: 34px;
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
+
+  &-tel {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form__icon path {
+  fill: $black-brown;
 }
 
 .form__textarea {
