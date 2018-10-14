@@ -106,9 +106,9 @@
 }
 
 .form__field-group input[type="radio"]:focus + label::before,
-.form__field-group input[type="checkbox"]:focus + label::before{
-  outline: thin dotted;
+.form__field-group input[type="checkbox"]:focus + label::before {
   outline: 5px auto -webkit-focus-ring-color;
+  // outline: thin dotted;
 }
 
 .form__label[for="weight-field"] {
@@ -288,9 +288,6 @@
     width: 414px;
     margin-bottom: 65px;
     padding-right: 0;
-  }
-
-  .form__text {
     padding-left: 70px;
   }
 
@@ -302,6 +299,9 @@
   }
 
   .form__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+
     &--about-cat:not(:last-child),
     &--contacts:not(:last-child) {
       margin-bottom: 20px;
@@ -319,11 +319,6 @@
     &--additionally {
       width: 287px;
     }
-  }
-
-  .form__wrapper {
-    padding-right: 0;
-    padding-left: 0;
   }
 
   .form__label {
@@ -346,7 +341,7 @@
 
     &--additionally::before {
       top: -10px;
-      left: 0px;
+      left: 0;
       width: 39px;
       height: 39px;
     }

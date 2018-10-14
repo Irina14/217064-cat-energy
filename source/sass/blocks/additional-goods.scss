@@ -64,7 +64,7 @@
   text-align: center;
   background: $green url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 64px;
@@ -208,6 +208,10 @@
     padding-left: 0;
     text-align: center;
     background: $green url("../img/gift-photo-desktop@1x.jpg") no-repeat center top;
+
+    &::before {
+      left: 95px;
+    }
   }
 
   .additional-goods__item {
@@ -237,11 +241,5 @@
 
   .additional-goods__button {
     min-width: 245px;
-  }
-
-  .additional-goods__action {
-    &::before {
-      left: 95px;
-    }
   }
 }
