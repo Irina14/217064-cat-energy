@@ -5,8 +5,9 @@
 
 .form__text {
   @include text(14px, 18px, $black);
+  width: 270px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .form__wrapper,
@@ -15,9 +16,29 @@
   @include padding-mobile;
 }
 
+.form__wrapper {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
 .form__label {
   @include text(16px, 18px, $black-brown);
+  margin-right: 16px;
 }
+
+.form__label[for="weight-field"] {
+  margin-right: 19px;
+}
+
+.form__label sup {
+  top: -0.15em;
+  font-size: 90%;
+}
+
 
 .form__legend {
   @include title(24px, 24px);
@@ -34,19 +55,44 @@
   &--task {
     padding-top: 25px;
     padding-bottom: 25px;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
+    border: 1px solid #ededed;
   }
 }
 
 .form__field,
 .form__textarea {
-  font: inherit;
-  font-size: 16px;
-  text-transform: uppercase;
+  @include text(16px, 18px, #444444);
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: 1px solid rgba($dark-grey, 0.5);
 
   &::placeholder {
     color: #444444;
+  }
+
+  &:hover {
+    border: 1px solid $dark-grey;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    outline: none;
+  }
+
+  &--error {
+    border: 2px solid #ff8282;
+    outline: none;
+  }
+}
+
+.form__field {
+  width: 170px;
+  line-height: 16px;
+  padding: 10px 15px 10px;
+
+  &:focus,
+  &--error {
+    padding: 9px 14px 9px;
   }
 }
 

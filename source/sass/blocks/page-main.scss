@@ -49,16 +49,15 @@
   &--form {
     @include container(320px);
     @include padding-mobile;
+    padding-top: 27px;
   }
 
   &--catalog {
     padding-bottom: 41px;
-    padding-top: 27px;
   }
 
   &--form {
-    margin-bottom: 28px;
-    padding-top: 30px;
+    margin-bottom: 37px;
   }
 }
 
