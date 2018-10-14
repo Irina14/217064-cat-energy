@@ -126,9 +126,6 @@
 
 .form__legend {
   @include title(24px, 24px);
-}
-
-.form__wrapper-legend {
   display: flex;
   margin-bottom: 34px;
   padding-left: 20px;
@@ -324,8 +321,7 @@
     }
   }
 
-  .form__wrapper,
-  .form__legend {
+  .form__wrapper {
     padding-right: 0;
     padding-left: 0;
   }
@@ -383,9 +379,6 @@
 
   .form__legend {
     @include title(36px, 36px);
-  }
-
-  .form__wrapper-legend {
     margin-bottom: 77px;
     padding-left: 0;
 
@@ -560,14 +553,14 @@
     &--additionally {
       width: 245px;
       margin-bottom: 20px;
+    }
 
-      &:not(:nth-child(2n)) {
-        margin-right: 0;
-      }
+    &--additionally:not(:nth-child(2n)) {
+      margin-right: 0;
+    }
 
-      &:not(:last-child) {
-         margin-right: 80px;
-      }
+    &--additionally:not(:last-child) {
+      margin-right: 80px;
     }
   }
 

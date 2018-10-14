@@ -97,16 +97,16 @@
   &--all {
     color: #444444;
     background-color: $grey;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: #ebebeb;
-    }
+  &--all:hover,
+  &--all:focus {
+    background-color: #ebebeb;
+  }
 
-    &:active {
-      color: rgba(#444444, 0.3);
-      background-color: #ebebeb;
-    }
+  &--all:active {
+    color: rgba(#444444, 0.3);
+    background-color: #ebebeb;
   }
 }
 
