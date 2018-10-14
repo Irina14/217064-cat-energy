@@ -459,6 +459,12 @@
     margin-bottom: 60px;
   }
 
+  .form__additionally-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .form__wrapper-button {
     display: flex;
     flex-wrap: wrap;
@@ -478,12 +484,6 @@
     font-size: 16px;
     text-align: right;
   }
-
-  .form__additionally-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -492,43 +492,17 @@
     margin-bottom: 83px;
   }
 
-  .form__questionnaire,
   .form__text {
-    padding-left: 0;
+    width: 450px;
+    margin-bottom: 67px;
+    padding-left: 110px;
   }
 
-  .form__textarea {
-    width: 1220px;
-  }
-
-  .form__field-group {
-    &--task {
-      padding: 25px;
-      border: 1px solid #ededed;
-    }
-
-    &--about-cat,
-    &--task {
-      width: 570px;
-    }
-  }
-
-  .form__button {
-    margin-right: 80px;
-    min-width: 568px;
-  }
-
-  .form__wrapper--additionally {
-    width: 245px;
-    margin-bottom: 20px;
-
-    &:not(:nth-child(2n)) {
-      margin-right: 0;
-    }
-
-    &:not(:last-child) {
-      margin-right: 80px;
-    }
+  .form__wrapper-info-cat,
+  .form__contacts-content,
+  .form__additionally-content {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
   .form__contacts-content,
@@ -538,9 +512,68 @@
     justify-content: space-between;
   }
 
+  .form__wrapper-info-cat {
+    margin-bottom: 68px;
+  }
+
+  .form__wrapper-legend {
+    &::before {
+      width: 70px;
+    }
+  }
+
+  .form__comment {
+    margin-bottom: 62px;
+  }
+
+  .form__textarea {
+    width: 1220px;
+    margin-left: 110px;
+  }
+
+  .form__field-group {
+    &--about-cat,
+    &--task {
+      width: 570px;
+      margin-bottom: 0;
+    }
+
+    &--contacts {
+      margin-bottom: 66px;
+    }
+
+    &--additionally {
+      margin-bottom: 19px;
+    }
+  }
+
   .form__wrapper {
     &--contacts {
       width: 570px;
     }
+
+    &--contacts:not(:last-child),
+    &--contacts:last-child {
+      margin-bottom: 0;
+    }
+
+    &--additionally {
+      width: 245px;
+      margin-bottom: 20px;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+
+      &:not(:last-child) {
+         margin-right: 80px;
+      }
+    }
+  }
+
+  .form__button {
+    margin-left: 110px;
+    margin-right: 84px;
+    min-width: 568px;
   }
 }
