@@ -283,20 +283,45 @@
 @media (min-width: $tablet-width) {
   .form {
     @include container($tablet-width);
-    @include padding-tablet;
     margin-bottom: 72px;
   }
 
   .form__text {
     @include text(20px, 30px, $black);
-    width: 384px;
+    width: 414px;
     margin-bottom: 65px;
     padding-right: 0;
   }
 
-  .form__questionnaire,
   .form__text {
-    padding-left: 40px;
+    padding-left: 70px;
+  }
+
+  .form__wrapper-info-cat,
+  .form__contacts-content,
+  .form__additionally-content {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  .form__wrapper {
+    &--about-cat:not(:last-child),
+    &--contacts:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--task:not(:last-child) {
+      margin-bottom: 33px;
+    }
+
+    &--additionally:not(:last-child),
+    &--additionally:last-child {
+      margin-bottom: 52px;
+    }
+
+    &--additionally {
+      width: 287px;
+    }
   }
 
   .form__wrapper,
@@ -306,51 +331,150 @@
   }
 
   .form__label {
-    @include text(16px, 18px, $black-brown);
+    @include text(20px, 20px, $black-brown);
+
+    &--task {
+      padding-left: 86px;
+    }
+
+    &--additionally {
+      padding-left: 58px;
+    }
+
+    &--task::before {
+      top: -8px;
+      left: 27px;
+      width: 38px;
+      height: 38px;
+    }
+
+    &--additionally::before {
+      top: -10px;
+      left: 0px;
+      width: 39px;
+      height: 39px;
+    }
+
+    &[for="email-field"] {
+      margin-right: 20px;
+    }
+  }
+
+  .form__icon {
+    right: 17px;
+  }
+
+  .form__label sup {
+    top: -0.05em;
+    font-size: 100%;
+  }
+
+  .form__field-group input[type="radio"]:checked + .form__label::before {
+    top: -8px;
+    left: 27px;
+    width: 18px;
+    height: 18px;
+    border: 10px solid $white;
+  }
+
+  .form__field-group input[type="checkbox"]:checked + .form__label::after {
+    left: 9px;
   }
 
   .form__legend {
     @include title(36px, 36px);
-    margin-bottom: 73px;
+  }
+
+  .form__wrapper-legend {
+    margin-bottom: 77px;
+    padding-left: 0;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 3px;
+      margin-right: 40px;
+      margin-top: 25px;
+      background-color: $green;
+    }
+
+    &::after {
+      margin-left: 40px;
+      margin-top: 25px;
+    }
+
+    &--additionally {
+      margin-bottom: 69px;
+    }
   }
 
   .form__field-group {
-    margin-bottom: 60px;
+    &--about-cat,
+    &--task {
+      margin-bottom: 74px;
+    }
 
     &--task {
-      padding-top: 0;
-      padding-bottom: 0;
-      border: none;
+      padding-top: 32px;
+      padding-bottom: 35px;
+    }
+
+    &--contacts {
+      margin-bottom: 64px;
+    }
+
+    &--additionally {
+      margin-bottom: 12px;
+    }
+  }
+
+  .form__field {
+    padding: 10px 19px 10px;
+
+    &:focus,
+    &--error {
+      padding: 9px 18px 9px;
     }
   }
 
   .form__field,
   .form__textarea {
-    font: inherit;
-    font-size: 20px;
-    line-height: 20px;
+    @include text(20px, 20px, #444444);
   }
 
   .form__textarea {
     width: 631px;
     height: 174px;
-    margin-left: 0;
+    margin-left: 70px;
+    margin-right: 67px;
+    padding: 15px 17px;
+
+    &:focus,
+    &--error {
+      padding: 14px 16px;
+    }
   }
 
   .form__comment {
     margin-bottom: 60px;
   }
 
+  .form__wrapper-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   .form__button {
     margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 60px;
+    margin-left: 70px;
+    margin-right: 61px;
+    padding: 16px;
     min-width: 283px;
     font-size: 20px;
   }
 
   .form__notice {
-    display: inline-block;
     font-size: 16px;
     text-align: right;
   }
@@ -358,22 +482,13 @@
   .form__additionally-content {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .form__wrapper--additionally {
-    width: 315px;
-    margin-bottom: 34px;
-
-    &:not(:nth-child(2n)) {
-      margin-right: 30px;
-    }
+    justify-content: space-between;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form {
     @include container($desktop-width);
-    @include padding-desktop;
     margin-bottom: 83px;
   }
 
