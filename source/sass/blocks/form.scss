@@ -38,65 +38,77 @@
   @include text(16px, 18px, $black-brown);
   margin-right: 16px;
 
-  &--task {
-    position: relative;
-    padding-left: 45px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      box-shadow: 0 0 0 1px $dark-grey;
-      box-sizing: content-box;
-    }
-  }
-
+  &--task,
   &--additionally {
     position: relative;
     padding-left: 45px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      border: 1px solid $dark-grey;
-    }
+    cursor: pointer;
   }
-}
 
-.form__field-group--task input:checked + .form__label {
-  &::before {
+  &--task::before,
+  &--additionally::before {
     content: "";
     position: absolute;
     top: -5px;
     left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: $green;
-    border: 8px solid $white;
+  }
+
+  &--task::before {
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     box-shadow: 0 0 0 1px $dark-grey;
     box-sizing: content-box;
   }
+
+  &--additionally::before {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark-grey;
+  }
 }
 
-.form__field-group--additionally input:checked + .form__label {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 5px;
-    width: 21px;
-    height: 16px;
-    background: url("../img/icon-tick.svg") no-repeat;
-  }
+.form__field-group input[type="radio"]:checked + .form__label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: $green;
+  border: 8px solid $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px $dark-grey;
+  box-sizing: content-box;
+}
+
+.form__field-group input[type="radio"]:hover + .form__label::before {
+  box-shadow: 0 0 0 1px #bababa;
+}
+
+.form__field-group input[type="radio"]:disabled + .form__label,
+.form__field-group input[type="checkbox"]:disabled + .form__label {
+  opacity: 0.3;
+}
+
+.form__field-group input[type="checkbox"]:checked + .form__label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 21px;
+  height: 16px;
+  background: url("../img/icon-tick.svg") no-repeat;
+}
+
+.form__field-group input[type="checkbox"]:hover + .form__label::before {
+  border: 1px solid #bababa;
+}
+
+.form__field-group input[type="radio"]:focus + label::before,
+.form__field-group input[type="checkbox"]:focus + label::before{
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .form__label[for="weight-field"] {
