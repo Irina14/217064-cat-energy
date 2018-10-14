@@ -11,7 +11,11 @@
     <header class="header">
       <div class="header__logo-wrapper">
         <a class="header__logo logo">
-          <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          </picture>
         </a>
       </div>
       <nav class="menu menu--index menu--closed menu--nojs">
@@ -40,7 +44,11 @@
         </div>
         <div class="page-main__wrapper-desc">
           <a class="page-main__button button" href="form.html">Подобрать программу</a>
-          <img class="page-main__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Cat Energy PRO 500 г. со вкусом курицы">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+            <img class="page-main__image" src="img/index-can-mobile@1x.png" alt="Cat Energy PRO 500 г. со вкусом курицы">
+          </picture>
         </div>
       </section>
 
@@ -105,13 +113,21 @@
           <ul class="example__slider">
             <li class="example__slider-item">
               <div class="example__wrapper-image example__wrapper-image--before">
-                <img class="example__slider-image" src="img/before-desktop@1x.png" width="320" height="240" alt="Фото кота до питания Cat Energy Slim">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                  <img class="example__slider-image" src="img/before-mobile@1x.png" alt="Фото кота до питания Cat Energy Slim">
+                </picture>
               </div>
               <div class="example__background-image example__background-image--before"></div>
             </li>
             <li class="example__slider-item">
               <div class="example__wrapper-image example__wrapper-image--after">
-                <img class="example__slider-image" src="img/after-desktop@1x.png" width="320" height="240" alt="Фото кота после питания Cat Energy Slim">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                  <img class="example__slider-image" src="img/after-mobile@1x.png" alt="Фото кота после питания Cat Energy Slim">
+                </picture>
               </div>
               <div class="example__background-image example__background-image--after"></div>
             </li>

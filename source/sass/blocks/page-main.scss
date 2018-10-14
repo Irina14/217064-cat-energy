@@ -20,8 +20,11 @@
   align-items: center;
 }
 
-.page-main__image {
+.page-main__wrapper-desc picture {
   order: -1;
+}
+
+.page-main__image {
   width: 280px;
   height: 271px;
   margin-top: -139px;
@@ -84,6 +87,10 @@
 
   .page-main__wrapper-desc {
     align-items: flex-start;
+  }
+
+  .page-main__wrapper-desc picture {
+    order: 0;
   }
 
   .page-main__title {
