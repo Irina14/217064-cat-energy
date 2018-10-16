@@ -170,7 +170,7 @@
   .example__title {
     @include title(60px, 60px);
     @include padding-tablet;
-    margin-bottom: 63px;
+    margin-bottom: 64px;
   }
 
   .example__desc {
@@ -373,7 +373,7 @@
   .example__title {
     @include padding-desktop;
     margin-bottom: 145px;
-    padding-top: 24px;
+    padding-top: 23px;
   }
 
   .example__desc {
@@ -452,6 +452,7 @@
 
   .example__slider-bar {
     margin-left: 40px;
+    margin-top: -96px;
   }
 
   .example__slider-scale {

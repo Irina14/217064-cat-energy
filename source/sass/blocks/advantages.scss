@@ -105,6 +105,7 @@
 
   .advantages__number {
     @include text(281px, 281px, $grey);
+    display: block;
     position: absolute;
     top: -40px;
     left: 115px;
@@ -129,6 +130,7 @@
   .advantages__item {
     width: 245px;
     margin-top: 0;
+    padding-top: 111px;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;

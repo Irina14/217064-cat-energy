@@ -32,7 +32,7 @@
 
 .page-main__button {
   min-width: 280px;
-  margin-top: 3px;
+  margin-top: -2px;
   padding: 11px;
 }
 
@@ -142,7 +142,7 @@
   .page-main__header {
     @include container($desktop-width);
     @include padding-desktop;
-    margin-bottom: 135px;
+    margin-bottom: 130px;
   }
 
   .page-main__wrapper-text {
@@ -157,6 +157,10 @@
     &--form {
       @include container($desktop-width);
       @include padding-desktop;
+    }
+
+    &--index {
+      margin-bottom: 42px;
     }
 
     &--catalog {

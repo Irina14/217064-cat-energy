@@ -6,8 +6,12 @@
 
 .header__logo-wrapper {
   @include padding-mobile;
-  padding-top: 16px;
+  padding-top: 11px;
   padding-bottom: 11px;
+}
+
+.header__logo {
+  display: block;
 }
 
 .header__logo-image {
@@ -21,8 +25,8 @@
     @include padding-tablet;
     display: flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 23px;
+    padding-bottom: 25px;
     border-bottom: none;
   }
 

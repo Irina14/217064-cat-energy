@@ -95,7 +95,8 @@
   .programs {
     @include container($tablet-width);
     @include padding-tablet;
-    margin-bottom: 47px;
+    margin-bottom: 46px;
+    margin-top: -3px;
   }
 
   .programs__item {
