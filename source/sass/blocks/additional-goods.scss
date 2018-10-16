@@ -136,6 +136,7 @@
 
   .additional-goods__caption {
     @include text(20px, 20px, $black-brown);
+    width: 285px;
     margin-bottom: 25px;
   }
 
@@ -144,10 +145,15 @@
     padding-top: 4px;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  .additional-goods__unit {
+    width: 192px;
   }
 
   .additional-goods__price {
-    margin-left: 50px;
+    width: 94px;
   }
 
   .additional-goods__action {
@@ -215,6 +221,7 @@
   }
 
   .additional-goods__item {
+    justify-content: flex-start;
     align-items: center;
     padding: 16px 0 15px;
     border-top: 1px solid #e6e6e6;
@@ -226,17 +233,21 @@
   .additional-goods__caption {
     width: 285px;
     margin-bottom: 0;
+    margin-right: 40px;
   }
 
   .additional-goods__desc {
-    display: flex;
-    justify-content: space-between;
-    width: 286px;
     margin-bottom: 0;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  .additional-goods__unit {
+    width: 245px;
   }
 
   .additional-goods__price {
-    margin-left: 0;
+    width: 60px;
   }
 
   .additional-goods__button {
