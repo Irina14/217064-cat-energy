@@ -357,7 +357,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    @include container($desktop-width);
+    @include container-desktop;
     position: relative;
     display: flex;
     padding-top: 0;
@@ -415,7 +415,7 @@
   .example__background-desc {
     position: absolute;
     z-index: 1;
-    bottom: -9px;
+    bottom: -7px;
     height: 462px;
     width: 100%;
     background-color: $grey;
@@ -452,7 +452,7 @@
 
   .example__slider-bar {
     margin-left: 40px;
-    margin-top: -96px;
+    margin-top: -94px;
   }
 
   .example__slider-scale {

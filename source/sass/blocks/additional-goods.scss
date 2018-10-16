@@ -177,7 +177,7 @@
 
 @media (min-width: $desktop-width) {
   .additional-goods {
-    @include container($desktop-width);
+    @include container-desktop;
     padding-bottom: 86px;
   }
 

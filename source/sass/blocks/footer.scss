@@ -8,14 +8,14 @@
 
 .footer__logo {
   padding-top: 39px;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
 }
 
 .footer__social {
-  padding-top: 22px;
-  padding-bottom: 17px;
+  padding-top: 21px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -56,7 +56,7 @@
 
 @media (min-width: $desktop-width) {
   .footer {
-    @include container($desktop-width);
+    @include container-desktop;
     @include padding-desktop;
   }
 }

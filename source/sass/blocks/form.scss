@@ -42,7 +42,7 @@
     margin-right: 12px;
   }
 
-  &[for="weight-field"] {
+  &--weight {
     margin-right: 19px;
   }
 
@@ -347,11 +347,11 @@
       height: 39px;
     }
 
-    &[for="email-field"] {
+    &--email {
       margin-right: 20px;
     }
 
-    &[for="tel-field"] {
+    &--tel {
       margin-right: 14px;
     }
   }
@@ -482,7 +482,7 @@
 
 @media (min-width: $desktop-width) {
   .form {
-    @include container($desktop-width);
+    @include container-desktop;
     margin-bottom: 83px;
   }
 

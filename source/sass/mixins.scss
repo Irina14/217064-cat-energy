@@ -18,6 +18,12 @@
   margin: 0 auto;
 }
 
+@mixin container-desktop {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
