@@ -53,7 +53,7 @@
   }
 
   &--catalog {
-    padding-bottom: 41px;
+    padding-bottom: 40px;
   }
 
   &--form {
@@ -101,7 +101,7 @@
     &--form {
       @include container($tablet-width);
       @include padding-tablet;
-      padding-top: 32px;
+      padding-top: 30px;
     }
 
     &--catalog {
@@ -164,7 +164,7 @@
     }
 
     &--catalog {
-      margin-bottom: 165px;
+      margin-bottom: 164px;
       padding-top: 44px;
     }
 
