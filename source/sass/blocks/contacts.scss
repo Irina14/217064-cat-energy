@@ -8,7 +8,6 @@
 }
 
 .contacts__wrapper {
-  @include container($mobile-width);
   @include padding-mobile;
   display: flex;
   padding-top: 29px;
