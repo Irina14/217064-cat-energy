@@ -1,16 +1,18 @@
 .page-main__header {
-  @include container($mobile-width);
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 22px;
 }
 
+.page-main__background {
+  background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
+}
+
 .page-main__wrapper-text {
-  @include padding-mobile;
+  @include container-mobile;
   padding-top: 26px;
   text-align: center;
-  background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
   min-height: 305px;
 }
 
@@ -41,7 +43,6 @@
   @include title(36px, 36px);
 
   &--index {
-    width: 280px;
     color: $white;
     margin-bottom: 25px;
   }
@@ -49,7 +50,6 @@
   &--catalog,
   &--form {
     @include container(280px);
-    @include padding-mobile;
     padding-top: 27px;
   }
 
@@ -63,16 +63,20 @@
 }
 
 .page-main__slogan {
+  width: 280px;
   @include text(14px, 14px, $white);
   margin: 0;
 }
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    @include container($tablet-width);
-    @include padding-tablet;
+    @include container-tablet;
     align-items: flex-start;
     margin-bottom: 0;
+  }
+
+  .page-main__background {
+    background: none;
   }
 
   .page-main__wrapper-text {
@@ -100,8 +104,7 @@
 
     &--catalog,
     &--form {
-      @include container($tablet-width);
-      @include padding-tablet;
+      @include container(708px);
       padding-top: 30px;
     }
 
@@ -117,6 +120,7 @@
 
   .page-main__slogan {
     @include text(20px, 20px, $black);
+    width: 487px;
   }
 
   .page-main__image {
@@ -142,7 +146,6 @@
 @media (min-width: $desktop-width) {
   .page-main__header {
     @include container-desktop;
-    @include padding-desktop;
     margin-bottom: 133px;
   }
 
@@ -156,8 +159,7 @@
   .page-main__title {
     &--catalog,
     &--form {
-      @include container-desktop;
-      @include padding-desktop;
+      @include container(1220px);
     }
 
     &--index {

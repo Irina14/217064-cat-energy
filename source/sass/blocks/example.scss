@@ -1,12 +1,11 @@
 .example {
-  @include container($mobile-width);
   padding-top: 29px;
   padding-bottom: 36px;
   background-color: $grey;
 }
 
 .example__wrapper-desc {
-  @include padding-mobile;
+  @include container-mobile;
   margin-bottom: 35px;
 }
 
@@ -98,6 +97,7 @@
 .example__slider-item {
   &:first-child {
     position: absolute;
+    left: calc(50% - 160px);
     z-index: 2;
   }
 
@@ -125,7 +125,6 @@
 .example__slider-scale {
   position: absolute;
   top: 3px;
-  left: 116px;
   width: 84px;
   height: 14px;
   background-color: $white;
@@ -154,7 +153,6 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    @include container($tablet-width);
     padding-top: 43px;
     padding-bottom: 66px;
     background-color: transparent;
@@ -162,6 +160,7 @@
   }
 
   .example__wrapper-desc {
+    @include container-tablet;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 83px;
@@ -169,20 +168,17 @@
 
   .example__title {
     @include title(60px, 60px);
-    @include padding-tablet;
     margin-bottom: 64px;
   }
 
   .example__desc {
-    @include padding-tablet;
-    width: 740px;
+    width: 700px;
     margin-bottom: 64px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .example__wrapper-info {
-    @include padding-tablet;
     display: flex;
     justify-content: space-between;
   }
@@ -248,19 +244,17 @@
   .example__slider-item {
     height: 628px;
 
+
     &:first-child {
       z-index: 3;
-      width: 384px;
+      left: calc(50% - 338px);
+      width: 338px;
       overflow: hidden;
     }
   }
 
   .example__wrapper-image {
     background-color: $white;
-
-    &--before {
-      padding-left: 45px;
-    }
 
     &--after {
       padding-left: 13px;
@@ -280,8 +274,9 @@
   .example__background-image {
     position: absolute;
     z-index: 1;
+    width: 100vw;
+    max-width: 100%;
     bottom: 0;
-    width: 768px;
     height: 462px;
 
     &--before {
@@ -294,8 +289,9 @@
   }
 
   .example__slider-bar {
+    width: 570px;
     z-index: 2;
-    margin-top: -94px;
+    margin: -94px auto 0 auto;
   }
 
   .example__slider-button {
@@ -319,7 +315,7 @@
 
   .example__slider-scale {
     top: 7px;
-    left: 170px;
+    left: calc(50% - 214px);
     width: 428px;
     height: 6px;
     background-color: #dcdcdc;
@@ -366,24 +362,21 @@
   }
 
   .example__wrapper-desc {
-    width: 680px;
+    width: 570px;
     margin-bottom: 0;
   }
 
   .example__title {
-    @include padding-desktop;
     margin-bottom: 145px;
     padding-top: 23px;
   }
 
   .example__desc {
-    @include padding-desktop;
-    width: 655px;
+    width: 435px;
     margin-bottom: 80px;
   }
 
   .example__wrapper-info {
-    @include padding-desktop;
     display: block;
   }
 
@@ -431,6 +424,7 @@
 
     &:first-child {
       position: absolute;
+      left: calc(50% - 347px);
       width: 365px;
     }
   }
@@ -451,11 +445,6 @@
   }
 
   .example__slider-bar {
-    margin-left: 40px;
-    margin-top: -94px;
-  }
-
-  .example__slider-scale {
-    left: 111px;
+    margin-left: 78px;
   }
 }

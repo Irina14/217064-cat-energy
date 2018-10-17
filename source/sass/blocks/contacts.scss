@@ -1,5 +1,4 @@
 .contacts {
-  @include container($mobile-width);
   background-color: $grey;
 
   &--index {
@@ -7,8 +6,8 @@
   }
 }
 
-.contacts__wrapper {
-  @include padding-mobile;
+.contacts__wrapper-text {
+  @include container-mobile;
   display: flex;
   padding-top: 29px;
   padding-bottom: 25px;
@@ -29,12 +28,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts {
-    @include container($tablet-width);
-  }
-
-  .contacts__wrapper {
-    @include padding-tablet;
+  .contacts__wrapper-text {
+    @include container-tablet;
     justify-content: space-between;
     padding-top: 67px;
     padding-bottom: 59px;
@@ -61,12 +56,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .contacts {
+  .contacts__wrapper {
     @include container-desktop;
     position: relative;
   }
 
-  .contacts__wrapper {
+  .contacts__wrapper-text {
     position: absolute;
     top: 95px;
     left: 110px;

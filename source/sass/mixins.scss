@@ -18,9 +18,18 @@
   margin: 0 auto;
 }
 
+@mixin container-mobile {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@mixin container-tablet {
+  width: 708px;
+  margin: 0 auto;
+}
+
 @mixin container-desktop {
-  width: 100%;
-  max-width: 1440px;
+  width: 1220px;
   margin: 0 auto;
 }
 

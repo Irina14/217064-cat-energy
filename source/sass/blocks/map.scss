@@ -1,7 +1,11 @@
 .map {
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center -38px;
+}
+
+.map__wrapper {
+  @include container-mobile;
   position: relative;
   height: 362px;
-  background: $grey url("../img/bg-map-mobile@1x.png") no-repeat center -38px;
 
   &::before {
     content: "";
@@ -15,10 +19,15 @@
   }
 }
 
+
 @media (min-width: $tablet-width) {
   .map {
+    background: url("../img/bg-map-tablet@1x.png") no-repeat center -5px;
+  }
+
+  .map__wrapper {
+    @include container-tablet;
     height: 396px;
-    background: $grey url("../img/bg-map-tablet@1x.png") no-repeat center -5px;
 
     &::before {
       top: 145px;
@@ -31,12 +40,16 @@
 
 @media (min-width: $desktop-width) {
   .map {
-    height: 400px;
-    background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center top;
+    background: url("../img/bg-map-desktop@1x.png") no-repeat center top;
 
     &--index {
       margin-top: 7px;
     }
+  }
+
+  .map__wrapper  {
+    @include container-desktop;
+    height: 400px;
 
     &::before {
       top: 150px;

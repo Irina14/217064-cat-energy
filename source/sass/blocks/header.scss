@@ -1,11 +1,10 @@
 .header {
-  @include container($mobile-width);
-  position: relative;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .header__logo-wrapper {
-  @include padding-mobile;
+  @include container(280px);
+  position: relative;
   padding-top: 11px;
   padding-bottom: 11px;
 }
@@ -21,8 +20,7 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    @include container($tablet-width);
-    @include padding-tablet;
+    @include container(708px);
     display: flex;
     align-items: center;
     padding-top: 23px;
@@ -43,8 +41,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    @include container-desktop;
-    @include padding-desktop;
+    @include container(1220px);
     position: relative;
     padding-top: 54px;
     padding-bottom: 28px;
@@ -52,6 +49,7 @@
 
   .header__logo-wrapper {
     width: 245px;
+    margin: 0;
   }
 
   .header__logo-image {
@@ -62,7 +60,7 @@
   .header__background {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -110px;
     z-index: 0;
     width: 720px;
     height: 696px;

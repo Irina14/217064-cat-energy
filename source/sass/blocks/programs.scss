@@ -1,6 +1,5 @@
 .programs {
-  @include container($mobile-width);
-  @include padding-mobile;
+  @include container-mobile;
   margin-bottom: 28px;
 }
 
@@ -93,8 +92,7 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    @include container($tablet-width);
-    @include padding-tablet;
+    @include container-tablet;
     margin-bottom: 46px;
   }
 
@@ -163,7 +161,6 @@
 @media (min-width: $desktop-width) {
   .programs {
     @include container-desktop;
-    @include padding-desktop;
     margin-bottom: 72px;
   }
 
