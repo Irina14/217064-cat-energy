@@ -1,5 +1,4 @@
 .additional-goods {
-  @include container($mobile-width);
   padding-bottom: 35px;
 }
 
@@ -21,7 +20,7 @@
 }
 
 .additional-goods__wrapper {
-  @include padding-mobile;
+  @include container-mobile;
 }
 
 .additional-goods__list {
@@ -92,8 +91,11 @@
 
 @media (min-width: $tablet-width) {
   .additional-goods {
-    @include container($tablet-width);
     padding-bottom: 75px;
+  }
+
+  .additional-goods__wrapper {
+    @include container-tablet;
   }
 
   .additional-goods__title {
@@ -119,10 +121,6 @@
     &::after {
       margin-top: 22px;
     }
-  }
-
-  .additional-goods__wrapper {
-    @include padding-tablet;
   }
 
   .additional-goods__item {
@@ -177,7 +175,6 @@
 
 @media (min-width: $desktop-width) {
   .additional-goods {
-    @include container-desktop;
     padding-bottom: 86px;
   }
 
@@ -197,7 +194,7 @@
   }
 
   .additional-goods__wrapper {
-    @include padding-desktop;
+    @include container-desktop;
     display: flex;
     justify-content: space-between;
   }

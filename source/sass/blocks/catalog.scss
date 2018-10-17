@@ -1,7 +1,3 @@
-.catalog {
-  @include container($mobile-width);
-}
-
 .catalog__list {
   @include reset-list;
 }
@@ -24,9 +20,12 @@
 }
 
 .catalog__wrapper {
-  padding-right: 19px;
-  padding-left: 19px;
+  @include container-mobile;
   display: flex;
+}
+
+.catalog__wrapper-item {
+  @include container-mobile;
 }
 
 .catalog__link-image,
@@ -73,7 +72,6 @@
 
 .catalog__slogan,
 .catalog__text {
-  @include padding-mobile;
   margin: 0;
 }
 
@@ -112,8 +110,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
-    @include container($tablet-width);
-    @include padding-tablet;
+    @include container-tablet;
   }
 
   .catalog__list {
@@ -231,11 +228,15 @@
 @media (min-width: $desktop-width) {
   .catalog {
     @include container-desktop;
-    @include padding-desktop;
   }
 
   .catalog__list {
     justify-content: flex-start;
+  }
+
+  .catalog__wrapper,
+  .catalog__wrapper-item {
+    width: auto;
   }
 
   .catalog__item {
