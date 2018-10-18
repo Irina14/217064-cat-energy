@@ -408,6 +408,7 @@
   .example__background-desc {
     position: absolute;
     z-index: 1;
+    left: -40px;
     bottom: -7px;
     height: 462px;
     width: 100%;
@@ -441,7 +442,6 @@
 
   .example__background-image {
     bottom: 0;
-    width: 760px;
   }
 
   .example__slider-bar {
