@@ -63,8 +63,8 @@
 }
 
 .page-main__slogan {
-  width: 280px;
   @include text(14px, 14px, $white);
+  width: 280px;
   margin: 0;
 }
 

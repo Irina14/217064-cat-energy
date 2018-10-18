@@ -67,7 +67,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .footer__wrapper  {
+  .footer__wrapper {
     @include container-desktop;
   }
 }
