@@ -40,7 +40,9 @@
 
       <section class="form">
         <h2 class="visually-hidden">Анкета</h2>
-        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="form__wrapper-text">
+          <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
         <form class="form__questionnaire" action="https://echo.htmlacademy.ru" method="get">
           <div class="form__wrapper-info-cat">
             <fieldset class="form__field-group form__field-group--about-cat">
@@ -94,7 +96,7 @@
             </div>
           </fieldset>
           <div class="form__comment">
-            <label class="form__legend" for="comment-field">Комментарий</label>
+            <label class="form__legend form__legend--comment" for="comment-field">Комментарий</label>
             <textarea class="form__textarea" name="comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <fieldset class="form__field-group form__field-group--additionally">
@@ -142,6 +144,7 @@
     </main>
 
     <footer class="footer">
+      <div class="footer__wrapper">
       <a class="footer__logo logo">
         <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
@@ -181,6 +184,7 @@
           </svg>
         </a>
       </div>
+    </div>
     </footer>
 
     <script src="js/script.js"></script>
