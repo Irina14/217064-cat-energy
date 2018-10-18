@@ -559,8 +559,12 @@
     }
 
     &::after {
-      width: 701px;
+      width: 701.5px;
       margin-left: 40px;
+    }
+
+    &--comment::after {
+      width: 1033px;
     }
 
     &--additionally {
@@ -568,11 +572,7 @@
     }
 
     &--additionally::after {
-      width: 1002px;
-    }
-
-    &--comment::after {
-      width: 1033px;
+      width: 1002.5px;
     }
   }
 
