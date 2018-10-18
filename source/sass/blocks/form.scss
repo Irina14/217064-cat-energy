@@ -299,28 +299,25 @@
 
 @media (min-width: $tablet-width) {
   .form {
-    @include container($tablet-width);
-    margin-bottom: 71px;
+    margin-bottom: 70px;
   }
 
   .form__text {
     @include text(20px, 30px, $black);
-    width: 414px;
-    margin-bottom: 66px;
-    padding-right: 0;
-    padding-left: 70px;
+    width: 384px;
   }
 
-  .form__wrapper-info-cat,
-  .form__contacts-content,
-  .form__additionally-content {
-    padding-left: 70px;
-    padding-right: 67px;
+  .form__wrapper-text {
+    @include container-tablet;
+    margin-bottom: 66px;
+    padding-right: 0;
+    padding-left: 40px;
   }
 
   .form__wrapper {
-    padding-right: 0;
-    padding-left: 0;
+    @include container-tablet;
+    padding-right: 37px;
+    padding-left: 40px;
 
     &--about-cat:not(:last-child),
     &--contacts:not(:last-child) {
@@ -337,7 +334,10 @@
     }
 
     &--additionally {
-      width: 287px;
+      width: 324px;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -377,7 +377,7 @@
   }
 
   .form__icon {
-    right: 17px;
+    right: 55px;
   }
 
   .form__label sup {
@@ -400,24 +400,33 @@
   .form__legend {
     @include title(36px, 36px);
     margin-bottom: 77px;
-    padding-left: 0;
+
+    &::before,
+    &::after {
+      margin-top: 25px;
+    }
 
     &::before {
-      content: "";
       width: 30px;
-      height: 3px;
-      margin-right: 40px;
-      margin-top: 25px;
-      background-color: $green;
+      margin-right: 30px;
     }
 
     &::after {
-      margin-left: 40px;
-      margin-top: 25px;
+      flex-grow: 1.1;
+      width: 145px;
+      margin-left: 32px;
     }
 
     &--additionally {
-      margin-bottom: 69px;
+      margin-bottom: 70px;
+    }
+
+    &--additionally::after {
+      width: 447px;
+    }
+
+    &--comment::after {
+      width: 479px;
     }
   }
 
@@ -458,8 +467,8 @@
   .form__textarea {
     width: 631px;
     height: 174px;
-    margin-left: 70px;
-    margin-right: 67px;
+    margin-left: 40px;
+    margin-right: 37px;
     padding: 15px 17px;
 
     &:focus,
@@ -468,17 +477,24 @@
     }
   }
 
+  .form__wrapper-comment {
+    @include container-tablet;
+  }
+
   .form__comment {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
 
   .form__additionally-content {
+    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 40px;
   }
 
   .form__wrapper-button {
+    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -486,7 +502,7 @@
 
   .form__button {
     margin-bottom: 0;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-right: 61px;
     padding: 16px;
     min-width: 283px;
