@@ -41,10 +41,6 @@
 @media (min-width: $desktop-width) {
   .map {
     background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center top;
-
-    &--index {
-      margin-top: 7px;
-    }
   }
 
   .map__wrapper {
