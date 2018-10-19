@@ -7,13 +7,17 @@
   width: 270px;
 }
 
+.form__wrapper-text,
+.form__wrapper,
+.form__wrapper-button {
+  @include container($mobile-content);
+}
+
 .form__wrapper-text {
-  @include container-mobile;
   margin-bottom: 39px;
 }
 
 .form__wrapper {
-  @include container-mobile;
   display: flex;
   align-items: center;
 
@@ -284,10 +288,6 @@
   margin-bottom: 30px;
 }
 
-.form__wrapper-button {
-  @include container-mobile;
-}
-
 .form__button {
   min-width: 280px;
   margin-bottom: 21px;
@@ -319,15 +319,21 @@
     width: 384px;
   }
 
+  .form__wrapper-text,
+  .form__wrapper,
+  .form__wrapper-comment,
+  .form__additionally-content,
+  .form__wrapper-button {
+    @include container($table-content);
+  }
+
   .form__wrapper-text {
-    @include container-tablet;
     margin-bottom: 66px;
     padding-right: 0;
     padding-left: 40px;
   }
 
   .form__wrapper {
-    @include container-tablet;
     padding-right: 37px;
     padding-left: 40px;
 
@@ -455,7 +461,7 @@
       width: 436px;
     }
 
-     &--additionally span {
+    &--additionally span {
       width: 215px;
     }
   }
@@ -508,16 +514,11 @@
     }
   }
 
-  .form__wrapper-comment {
-    @include container-tablet;
-  }
-
   .form__comment {
     margin-bottom: 64px;
   }
 
   .form__additionally-content {
-    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -525,7 +526,6 @@
   }
 
   .form__wrapper-button {
-    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -562,7 +562,7 @@
   .form__wrapper-comment,
   .form__additionally-content,
   .form__wrapper-button {
-    @include container-desktop;
+    @include container($desktop-content);
   }
 
   .form__wrapper-text {

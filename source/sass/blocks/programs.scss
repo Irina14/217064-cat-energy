@@ -1,5 +1,5 @@
 .programs {
-  @include container-mobile;
+  @include container($mobile-content);
   margin-bottom: 28px;
 }
 
@@ -92,7 +92,7 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    @include container-tablet;
+    @include container($table-content);
     margin-bottom: 46px;
   }
 
@@ -160,7 +160,7 @@
 
 @media (min-width: $desktop-width) {
   .programs {
-    @include container-desktop;
+    @include container($desktop-content);
     margin-bottom: 72px;
   }
 

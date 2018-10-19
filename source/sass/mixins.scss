@@ -1,35 +1,5 @@
-@mixin padding-mobile {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@mixin padding-tablet {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-@mixin padding-desktop {
-  padding-left: 110px;
-  padding-right: 110px;
-}
-
 @mixin container($width) {
   width: $width;
-  margin: 0 auto;
-}
-
-@mixin container-mobile {
-  width: 280px;
-  margin: 0 auto;
-}
-
-@mixin container-tablet {
-  width: 708px;
-  margin: 0 auto;
-}
-
-@mixin container-desktop {
-  width: 1220px;
   margin: 0 auto;
 }
 

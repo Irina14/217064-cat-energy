@@ -10,10 +10,10 @@
 }
 
 .page-main__wrapper-text {
-  @include container-mobile;
+  @include container($mobile-content);
+  min-height: 305px;
   padding-top: 26px;
   text-align: center;
-  min-height: 305px;
 }
 
 .page-main__wrapper-desc {
@@ -49,7 +49,7 @@
 
   &--catalog,
   &--form {
-    @include container(280px);
+    @include container($mobile-content);
     padding-top: 27px;
   }
 
@@ -70,7 +70,7 @@
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    @include container-tablet;
+    @include container($table-content);
     align-items: flex-start;
     margin-bottom: 0;
   }
@@ -104,7 +104,7 @@
 
     &--catalog,
     &--form {
-      @include container(708px);
+      @include container($table-content);
       padding-top: 30px;
     }
 
@@ -145,7 +145,7 @@
 
 @media (min-width: $desktop-width) {
   .page-main__header {
-    @include container-desktop;
+    @include container($desktop-content);
     position: relative;
     margin-bottom: 133px;
 
@@ -171,7 +171,7 @@
   .page-main__title {
     &--catalog,
     &--form {
-      @include container(1220px);
+      @include container($desktop-content);
     }
 
     &--index {

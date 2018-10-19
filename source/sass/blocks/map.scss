@@ -3,7 +3,7 @@
 }
 
 .map__wrapper {
-  @include container-mobile;
+  @include container($mobile-content);
   position: relative;
   height: 362px;
 
@@ -26,7 +26,7 @@
   }
 
   .map__wrapper {
-    @include container-tablet;
+    @include container($table-content);
     height: 396px;
 
     &::before {
@@ -44,7 +44,7 @@
   }
 
   .map__wrapper {
-    @include container-desktop;
+    @include container($desktop-content);
     height: 400px;
 
     &::before {

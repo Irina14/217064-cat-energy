@@ -3,7 +3,7 @@
 }
 
 .header__logo-wrapper {
-  @include container(280px);
+  @include container($mobile-content);
   position: relative;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -20,7 +20,7 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    @include container(708px);
+    @include container($table-content);
     display: flex;
     align-items: center;
     padding-top: 23px;
@@ -42,7 +42,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    @include container(1220px);
+    @include container($desktop-content);
     position: relative;
     padding-top: 54px;
     padding-bottom: 28px;

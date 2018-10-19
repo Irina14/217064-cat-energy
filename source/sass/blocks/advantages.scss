@@ -1,5 +1,5 @@
 .advantages {
-  @include container-mobile;
+  @include container($mobile-content);
   margin-bottom: 45px;
 }
 
@@ -60,7 +60,7 @@
 
 @media (min-width: $tablet-width) {
   .advantages {
-    @include container-tablet;
+    @include container($table-content);
   }
 
   .advantages__title {
@@ -113,7 +113,7 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-    @include container-desktop;
+    @include container($desktop-content);
   }
 
   .advantages__title {

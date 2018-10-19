@@ -33,7 +33,7 @@
 }
 
 .additional-goods__wrapper {
-  @include container-mobile;
+  @include container($mobile-content);
 }
 
 .additional-goods__list {
@@ -108,7 +108,7 @@
   }
 
   .additional-goods__wrapper {
-    @include container-tablet;
+    @include container($table-content);
   }
 
   .additional-goods__title {
@@ -210,7 +210,7 @@
   }
 
   .additional-goods__wrapper {
-    @include container-desktop;
+    @include container($desktop-content);
     display: flex;
     justify-content: space-between;
   }

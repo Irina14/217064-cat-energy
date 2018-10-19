@@ -20,12 +20,12 @@
 }
 
 .catalog__wrapper {
-  @include container-mobile;
+  @include container($mobile-content);
   display: flex;
 }
 
 .catalog__wrapper-item {
-  @include container-mobile;
+  @include container($mobile-content);
 }
 
 .catalog__link-image,
@@ -110,7 +110,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
-    @include container-tablet;
+    @include container($table-content);
   }
 
   .catalog__list {
@@ -228,7 +228,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    @include container-desktop;
+    @include container($desktop-content);
   }
 
   .catalog__list {
