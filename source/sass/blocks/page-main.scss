@@ -146,7 +146,19 @@
 @media (min-width: $desktop-width) {
   .page-main__header {
     @include container-desktop;
+    position: relative;
     margin-bottom: 133px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -145px;
+      right: -109px;
+      z-index: 0;
+      width: 720px;
+      height: 696px;
+      background: $green url("../img/index-background-desktop@1x.jpg") no-repeat;
+    }
   }
 
   .page-main__wrapper-text {
@@ -178,6 +190,8 @@
   }
 
   .page-main__wrapper-desc {
+    position: relative;
+    z-index: 1;
     flex-direction: row;
     align-items: flex-start;
     padding-left: 80px;

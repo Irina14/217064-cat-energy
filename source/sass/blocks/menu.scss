@@ -78,6 +78,8 @@
 @media (min-width: $tablet-width) {
   .menu {
     @include text(18px, 25px, $black-brown);
+    position: relative;
+    z-index: 1;
     width: 500px;
     margin-left: auto;
     font-weight: 400;
