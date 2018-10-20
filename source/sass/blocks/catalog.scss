@@ -37,11 +37,6 @@
   margin-top: -20px;
 }
 
-.catalog__image {
-  width: 140px;
-  height: 144px;
-}
-
 .catalog__title {
   @include reset-title;
   margin-bottom: 10px;
@@ -152,11 +147,6 @@
     width: auto;
   }
 
-  .catalog__image {
-    width: 324px;
-    height: 174px;
-  }
-
   .catalog__link-image {
     display: block;
     margin-top: -47px;
@@ -164,10 +154,6 @@
 
     &--big {
       margin-top: -80px;
-    }
-
-    &--big img {
-      height: 208px;
     }
   }
 
@@ -252,10 +238,6 @@
     &:nth-child(4) {
       margin-top: 0;
     }
-  }
-
-  .catalog__image {
-    width: 245px;
   }
 
   .catalog__desc tr {

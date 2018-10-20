@@ -111,11 +111,6 @@
   background-color: $grey;
 }
 
-.example__slider-image {
-  width: 320px;
-  height: 240px;
-}
-
 .example__slider-bar {
   position: relative;
   display: flex;
@@ -298,7 +293,6 @@
     display: block;
     max-width: 690px;
     width: 690px;
-    height: 517px;
     margin: 0 auto;
   }
 
