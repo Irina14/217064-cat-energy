@@ -432,8 +432,12 @@
 
     &:first-child {
       position: absolute;
-      left: calc(50% - 347px);
-      width: 365px;
+      left: calc(50% - 328px);
+      width: 355px;
+    }
+
+    &:last-child {
+      left: calc(50% - 326px);
     }
 
     &:first-child::before {
@@ -446,6 +450,11 @@
       height: 462px;
       background-color: $grey;
     }
+  }
+
+  .example__slider-image {
+    width: 670px;
+    max-width: 670px;
   }
 
   .example__wrapper-image {

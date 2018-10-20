@@ -9,29 +9,31 @@
   <body>
 
     <header class="header">
-      <div class="header__logo-wrapper">
-        <a class="header__logo logo">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-          </picture>
-        </a>
+      <div class="header__wrapper">
+        <div class="header__logo-wrapper">
+          <a class="header__logo logo">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+            </picture>
+          </a>
+        </div>
+        <nav class="menu menu--closed menu--nojs">
+          <button class="menu__toggle" type="button" aria-label="Открыть меню"></button>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a class="menu__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="menu menu--closed menu--nojs">
-        <button class="menu__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="index.html">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="menu__item menu__item--active">
-            <a class="menu__link">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page-main">
