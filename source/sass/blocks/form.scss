@@ -259,11 +259,13 @@
   &--email {
     width: 17px;
     height: 13px;
+    top: calc(50% - 6px);
   }
 
-  &-tel {
+  &--tel {
     width: 20px;
     height: 20px;
+    top: calc(50% - 10px);
   }
 }
 
