@@ -117,8 +117,9 @@
 
 .form__field-group input[type="radio"]:focus + label::before,
 .form__field-group input[type="checkbox"]:focus + label::before {
+  /* stylelint-disable */
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
-  // outline: thin dotted;
 }
 
 .form__label sup {
@@ -169,7 +170,7 @@
   }
 
   &--additionally::after {
-    width: 136px;
+    width: 137px;
     margin-left: 23px;
   }
 
