@@ -222,11 +222,6 @@
     border: 2px solid #444444;
     outline: none;
   }
-
-  &--error {
-    border: 2px solid #ff8282;
-    outline: none;
-  }
 }
 
 .form__field {
@@ -235,8 +230,13 @@
   padding: 10px 15px 10px;
 
   &:focus,
-  &--error {
+  &--error[required] {
     padding: 9px 14px 9px;
+  }
+
+  &--error[required] {
+    border: 2px solid #ff8282;
+    outline: none;
   }
 
   &--contacts {
@@ -247,7 +247,7 @@
     fill: $green;
   }
 
-  &--error + .form__icon path {
+  &--error[required] + .form__icon path {
     fill: #ff8282;
   }
 }
@@ -280,8 +280,7 @@
   margin: 0 auto;
   padding: 13px 12px 13px 15px;
 
-  &:focus,
-  &--error {
+  &:focus {
     padding: 12px 11px 12px 14px;
   }
 }
