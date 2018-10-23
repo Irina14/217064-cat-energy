@@ -5,7 +5,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
-    background-size: auto 362px;
+    background-size: auto 400px;
   }
 }
 
@@ -44,7 +44,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.png");
-      background-size: auto 396px;
+      background-size: auto 400px;
     }
   }
 
