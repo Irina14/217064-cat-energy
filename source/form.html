@@ -9,24 +9,31 @@
   <body>
 
     <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <img class="header__logo-image" src="img\logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-      </a>
-      <nav class="menu">
-        <button class="menu__open" type="button" aria-label="Открыть меню"></button>
-        <button class="menu__close" type="button" aria-label="Закрыть меню"></button>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="index.html">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="menu__item menu__item--active">
-            <a class="menu__link">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__wrapper">
+        <div class="header__logo-wrapper">
+          <a class="header__logo logo">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+            </picture>
+          </a>
+        </div>
+        <nav class="menu menu--closed menu--nojs">
+          <button class="menu__toggle" type="button" aria-label="Открыть меню"></button>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a class="menu__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -35,127 +42,157 @@
 
       <section class="form">
         <h2 class="visually-hidden">Анкета</h2>
-        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="form__wrapper-text">
+          <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
         <form class="form__questionnaire" action="https://echo.htmlacademy.ru" method="get">
           <div class="form__wrapper-info-cat">
             <fieldset class="form__field-group form__field-group--about-cat">
-              <legend class="visually-hidden">Информация о коте</legend>
-              <div class="form__wrapper">
+              <h3 class="visually-hidden">Информация о коте</h3>
+              <div class="form__wrapper form__wrapper--about-cat">
                 <label class="form__label" for="nickname-field">Имя:<sup>*</sup></label>
                 <input class="form__field" type="text" name="nickname" id="nickname-field" placeholder="Барсик" required>
               </div>
-              <div class="form__wrapper">
-                <label class="form__label" for="weight-field">Вес (кг):<sup>*</sup>  </label>
+              <div class="form__wrapper form__wrapper--about-cat">
+                <label class="form__label form__label--weight" for="weight-field">Вес (кг):<sup>*</sup>  </label>
                 <input class="form__field" type="text" name="weight" id="weight-field" placeholder="7" required>
               </div>
-              <div class="form__wrapper">
+              <div class="form__wrapper form__wrapper--about-cat">
                 <label class="form__label" for="age-field">Возраст (лет):</label>
                 <input class="form__field" type="text" name="age" id="age-field" placeholder="7">
               </div>
             </fieldset>
             <fieldset class="form__field-group form__field-group--task">
-              <legend class="visually-hidden">Ваша цель</legend>
-              <div class="form__wrapper">
+              <h3 class="visually-hidden">Ваша цель</h3>
+              <div class="form__wrapper form__wrapper--task">
                 <input class="visually-hidden" type="radio" name="task" id="task-1" value="Похудение" checked>
-                <label class="form__label" for="task-1">Похудение</label>
+                <label class="form__label form__label--task" for="task-1">Похудение</label>
               </div>
-              <div class="form__wrapper">
+              <div class="form__wrapper form__wrapper--task">
                 <input class="visually-hidden" type="radio" name="task" id="task-2" value="Набор массы">
-                <label class="form__label" for="task-2">Набор массы</label>
+                <label class="form__label form__label--task" for="task-2">Набор массы</label>
               </div>
-              <div class="form__wrapper">
+              <div class="form__wrapper form__wrapper--task">
                 <input class="visually-hidden" type="radio" name="task" id="task-3" value="Не знаю (нужен ваш совет)">
-                <label class="form__label" for="task-3">Не знаю (нужен ваш совет)</label>
+                <label class="form__label form__label--task" for="task-3">Не знаю (нужен ваш совет)</label>
               </div>
             </fieldset>
           </div>
           <fieldset class="form__field-group form__field-group--contacts">
-            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <h3 class="form__legend form__legend--contacts"><span>Контактные данные (владельца кота)</span></h3>
             <div class="form__contacts-content">
               <div class="form__wrapper form__wrapper--contacts">
-                <label class="form__label" for="email-field">E-mail:<sup>*</sup></label>
-                <input class="form__field" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com" required>
-                <!-- svg-картинка -->
+                <label class="form__label form__label--contacts form__label--email" for="email-field">E-mail:<sup>*</sup></label>
+                <input class="form__field form__field--contacts" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com" required>
+                <svg class="form__icon form__icon--email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 13" width="17" height="13">
+                  <path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/>
+                </svg>
               </div>
               <div class="form__wrapper form__wrapper--contacts">
-                <label class="form__label" for="tel-field">Телефон:<sup>*</sup></label>
-                <input class="form__field" type="tel" name="tel" id="tel-field" placeholder="8 (960) 900-60-90" required>
-                <!-- svg-картинка -->
+                <label class="form__label form__label--contacts form__label--tel" for="tel-field">Телефон:<sup>*</sup></label>
+                <input class="form__field form__field--contacts" type="tel" name="tel" id="tel-field" placeholder="8 (960) 900-60-90" required>
+                <svg class="form__icon form__icon--tel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+                  <path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/>
+                </svg>
               </div>
             </div>
           </fieldset>
           <div class="form__comment">
-            <label class="form__legend" for="comment-field">Комментарий</label>
-            <textarea class="form__textarea" name="comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <label class="form__legend form__legend--comment" for="comment-field"><span>Комментарий</span></label>
+            <div class="form__wrapper-comment">
+              <textarea class="form__textarea" name="comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </div>
           <fieldset class="form__field-group form__field-group--additionally">
-            <legend class="form__legend">Дополнительно</legend>
+            <h3 class="form__legend form__legend--additionally"><span>Дополнительно</span></h3>
             <div class="form__additionally-content">
               <div class="form__wrapper form__wrapper--additionally">
                 <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener-field" checked>
-                <label class="form__label" for="sweetener-field">Сахарозаменитель</label>
+                <label class="form__label form__label--additionally" for="sweetener-field">Сахарозаменитель</label>
               </div>
               <div class="form__wrapper form__wrapper--additionally">
                 <input class="visually-hidden" type="checkbox" name="water" id="water-field">
-                <label class="form__label" for="water-field">Питьевая вода</label>
+                <label class="form__label form__label--additionally" for="water-field">Питьевая вода</label>
               </div>
               <div class="form__wrapper form__wrapper--additionally">
                 <input class="visually-hidden" type="checkbox" name="milk" id="milk-field">
-                <label class="form__label" for="milk-field">Молоко</label>
+                <label class="form__label form__label--additionally" for="milk-field">Молоко</label>
               </div>
               <div class="form__wrapper form__wrapper--additionally">
                 <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins-field">
-                <label class="form__label" for="vitamins-field">Витамины</label>
+                <label class="form__label form__label--additionally" for="vitamins-field">Витамины</label>
               </div>
             </div>
           </fieldset>
-          <button class="form__button button" type="submit">Отправить заявку</button>
-          <small class="form__notice">
-            <sup>*</sup> &mdash; Обязательные поля
-          </small>
+          <div class="form__wrapper-button">
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <small class="form__notice">
+              <sup>*</sup> &mdash; Обязательные поля
+            </small>
+          </div>
         </form>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="contacts__wrapper-text">
+            <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="contacts__address"><span>ул. Большая Конюшенная, д. 19/8</span>  Санкт-Петербург</p>
+          </div>
         </div>
-        <div class="map"></div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5948798609234!2d30.318289160119733!3d59.93886427616906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1540034439027" allowfullscreen></iframe>
+          <div class="map__wrapper"></div>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="footer__logo logo" href="index.html">
-        <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-      </a>
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#" aria-label="Мы в Вконтакте">Вконтакте
-          <!-- svg-картинка -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--inst" href="#" aria-label="Мы в Инстаграме">Инстаграм
-          <!-- svg-картинка -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb" href="#" aria-label="Мы в Фейсбуке">Фейсбук
-          <!-- svg-картинка -->
-          </a>
-        </li>
-      </ul>
-      <div class="footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
-            <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
-          </svg>
+      <div class="footer__wrapper">
+        <a class="footer__logo logo">
+          <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
+        <div class="footer__wrapper-social">
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#" aria-label="Мы в Вконтакте">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12" width="22" height="12">
+                  <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6 0 0 .5 1.1 1.1 2 1 1.5 1.4 1.9 1.5 2 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1 0 .1.5.5.9.9 1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.8-.1zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3H16.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1v-.3-1.3c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1H1.3h-.1c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--inst" href="#" aria-label="Мы в Инстаграме">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                  <style>.st0{fill:#231f20}</style>
+                  <path class="st0" d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z"/>
+                  <path class="st0" d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z"/>
+                  <circle class="st0" cx="12.3" cy="3.7" r=".9"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="#" aria-label="Мы в Фейсбуке">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 19" width="10" height="19">
+                  <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
+              <path fill="#2E368F" d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

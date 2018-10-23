@@ -1,17 +1,19 @@
 .page-main__header {
-  @include container($mobile-width);
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 22px;
 }
 
-.page-main__wrapper-text {
-  @include padding-mobile;
-  padding-top: 25px;
-  text-align: center;
+.page-main__background {
   background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.page-main__wrapper-text {
+  @include container($mobile-content);
   min-height: 305px;
+  padding-top: 26px;
+  text-align: center;
 }
 
 .page-main__wrapper-desc {
@@ -20,13 +22,19 @@
   align-items: center;
 }
 
-.page-main__image {
+.page-main__wrapper-desc picture {
   order: -1;
-  margin-top: -138px;
+}
+
+.page-main__image {
+  display: block;
+  margin-top: -139px;
 }
 
 .page-main__button {
   min-width: 280px;
+  margin-top: 2px;
+  padding: 11px;
 }
 
 .page-main__title {
@@ -34,36 +42,39 @@
 
   &--index {
     color: $white;
+    margin-bottom: 25px;
   }
 
   &--catalog,
   &--form {
-    @include container(320px);
-    @include padding-mobile;
-    padding-top: 30px;
+    @include container($mobile-content);
+    padding-top: 27px;
   }
 
   &--catalog {
-    padding-bottom: 35px;
-    border-bottom: 1px solid $grey;
+    padding-bottom: 40px;
   }
 
   &--form {
-    margin-bottom: 28px;
+    margin-bottom: 37px;
   }
 }
 
 .page-main__slogan {
   @include text(14px, 14px, $white);
+  width: 280px;
   margin: 0;
 }
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    @include container($tablet-width);
-    @include padding-tablet;
+    @include container($table-content);
     align-items: flex-start;
     margin-bottom: 0;
+  }
+
+  .page-main__background {
+    background: none;
   }
 
   .page-main__wrapper-text {
@@ -71,47 +82,60 @@
     padding-left: 90px;
     padding-right: 0;
     padding-top: 30px;
+    margin-bottom: 48px;
     text-align: left;
     background: none;
   }
 
   .page-main__wrapper-desc {
     align-items: flex-start;
-    padding-left: 90px;
+  }
+
+  .page-main__wrapper-desc picture {
+    order: 0;
   }
 
   .page-main__title {
     @include title(60px, 60px);
-    margin-bottom: 30px;
+    width: 487px;
+    margin-bottom: 41px;
 
     &--catalog,
     &--form {
-      @include container($tablet-width);
-      @include padding-tablet;
-      margin-bottom: 50px;
+      @include container($table-content);
+      padding-top: 30px;
     }
 
     &--catalog {
       padding-bottom: 0;
-      border-bottom: none;
+      margin-bottom: 165px;
+    }
+
+    &--form {
+      margin-bottom: 55px;
     }
   }
 
   .page-main__slogan {
     @include text(20px, 20px, $black);
-    margin-bottom: 45px;
+    width: 487px;
   }
 
   .page-main__image {
     position: relative;
-    margin-top: -60px;
     order: 0;
+    width: 709px;
+    height: 609px;
+    margin-top: -80px;
   }
 
   .page-main__button {
     position: relative;
     z-index: 2;
     min-width: 245px;
+    margin-top: 0;
+    margin-left: 90px;
+    padding: 16px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -119,40 +143,55 @@
 
 @media (min-width: $desktop-width) {
   .page-main__header {
-    @include container($desktop-width);
-    @include padding-desktop;
-    margin-bottom: 170px;
+    @include container($desktop-content);
+    position: relative;
+    margin-bottom: 133px;
   }
 
   .page-main__wrapper-text {
     width: 550px;
+    margin-bottom: 53px;
     padding-left: 80px;
-    padding-top: 75px;
+    padding-top: 77px;
   }
 
   .page-main__title {
-    margin-bottom: 35px;
-
     &--catalog,
     &--form {
-      @include container($desktop-width);
-      @include padding-desktop;
-      margin-bottom: 52px;
+      @include container($desktop-content);
+    }
+
+    &--index {
+      margin-bottom: 42px;
+    }
+
+    &--catalog {
+      margin-bottom: 164px;
+      padding-top: 44px;
+    }
+
+    &--form {
+      margin-bottom: 55px;
+      padding-top: 43px;
     }
   }
 
-  .page-main__slogan {
-    margin-bottom: 50px;
-  }
-
   .page-main__wrapper-desc {
+    position: relative;
+    z-index: 1;
     flex-direction: row;
     align-items: flex-start;
     padding-left: 80px;
   }
 
   .page-main__image {
-    margin-top: -360px;
-    margin-left: 100px;
+    width: 552px;
+    height: 499px;
+    margin-top: -314px;
+    margin-left: 125px;
+  }
+
+  .page-main__button {
+    margin-left: 0;
   }
 }

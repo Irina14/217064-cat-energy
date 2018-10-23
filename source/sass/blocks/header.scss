@@ -1,49 +1,78 @@
 .header {
-  @include container($mobile-width);
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .header__logo-wrapper {
-  @include padding-mobile;
+  @include container($mobile-content);
+  position: relative;
   padding-top: 11px;
-  padding-bottom: 16px;
+  padding-bottom: 11px;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__logo-image {
+  width: 191px;
+  height: 38px;
 }
 
 @media (min-width: $tablet-width) {
   .header {
-    @include container($tablet-width);
-    @include padding-tablet;
+    padding-top: 23px;
+    padding-bottom: 25px;
+    border-bottom: none;
+  }
+
+  .header__wrapper {
+    @include container($table-content);
     display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    align-items: center;
   }
 
   .header__logo-wrapper {
     width: 192px;
+    margin: 0;
     padding: 0;
+  }
+
+  .header__logo-image {
+    width: 173px;
+    height: 58px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    @include container($desktop-width);
-    @include padding-desktop;
     position: relative;
     padding-top: 54px;
     padding-bottom: 28px;
+
+    &--index::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      width: 50%;
+      height: 696px;
+      background: $green url("../img/index-background-desktop@1x.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .header__wrapper {
+    @include container($desktop-content);
   }
 
   .header__logo-wrapper {
     width: 245px;
+    margin: 0;
   }
 
-  .header__background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    width: 720px;
-    height: 696px;
-    background: $green url("../img/index-background-desktop@1x.jpg") no-repeat;
+  .header__logo-image {
+    width: 202px;
+    height: 59px;
   }
 }

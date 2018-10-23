@@ -8,7 +8,7 @@
 }
 
 .menu__item {
-  padding: 20px;
+  padding: 22px 20px 23px;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
 
@@ -17,21 +17,74 @@
   }
 }
 
+.menu--opened .menu__item:last-child {
+  border-bottom: none;
+}
+
 .menu__link {
   color: $black;
 }
 
-.menu__open,
-.menu__close {
+.menu__toggle {
   @include reset-button;
   position: absolute;
+  right: 20px;
+  top: 21px;
+  width: 24px;
+  height: 18px;
+}
+
+.menu--closed .menu__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $black-brown;
+  box-shadow: 0 8px 0 0 $black-brown, 0 16px 0 0 $black-brown;
+}
+
+.menu--opened .menu__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/icon-close.svg") no-repeat;
+}
+
+@media (max-width: $mobile-width-only) {
+  .menu--closed .menu__list {
+    display: none;
+  }
+
+  .menu--opened .menu__list {
+    display: block;
+  }
+
+  .menu--nojs .menu__list {
+    display: block;
+  }
+
+  .menu--nojs .menu__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .menu {
     @include text(18px, 25px, $black-brown);
+    position: relative;
+    z-index: 1;
     width: 500px;
+    margin-left: auto;
     font-weight: 400;
+  }
+
+  .menu__toggle {
+    display: none;
   }
 
   .menu__list {
@@ -41,6 +94,7 @@
   }
 
   .menu__item {
+    position: relative;
     padding: 0;
     border-bottom: none;
 
@@ -49,7 +103,28 @@
     }
 
     &:not(:last-child) {
-      margin-right: 8px;
+      margin-right: 35px;
+    }
+
+    &--active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 33px;
+      width: 100%;
+      height: 2px;
+      background-color: $green;
+    }
+  }
+
+  .menu__link[href] {
+    &:hover,
+    &:focus {
+      color: rgba($black, 0.6);
+    }
+
+    &:active {
+      color: rgba($black, 0.3);
     }
   }
 }
@@ -66,13 +141,30 @@
     }
   }
 
+  .menu__item {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+
+  .menu__list--index .menu__item {
+    &--active::after {
+      background-color: $white;
+    }
+  }
+
   .menu__link--index {
     color: $white;
   }
 
-  .menu__item {
-    &:not(:last-child) {
-      margin-right: 30px;
+  .menu__link--index[href] {
+    &:hover,
+    &:focus {
+      color: rgba($white, 0.6);
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
     }
   }
 }

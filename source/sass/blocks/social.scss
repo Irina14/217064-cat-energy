@@ -2,14 +2,56 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  width: 280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   list-style: none;
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
+
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 33px;
+  }
+}
+
+.social__link path,
+.social__link circle {
+  fill: #444444;
+}
+
+.social__link {
+  display: block;
+  width: 22px;
+  text-align: center;
+
+  &--vk svg {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--inst svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb svg {
+    width: 10px;
+    height: 19px;
+  }
+
+  &:hover path,
+  &:focus path,
+  &:hover circle,
+  &:focus circle {
+    fill: $green;
+  }
+
+  &:active path,
+  &:active circle {
+    fill: rgba($green, 0.3);
   }
 }

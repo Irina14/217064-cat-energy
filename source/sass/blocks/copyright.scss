@@ -2,10 +2,41 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__link {
   font-size: 16px;
   line-height: 16px;
   color: #444444;
+
+  &:active {
+    color: rgba(#444444, 0.3);
+  }
+}
+
+.copyright__logo svg {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__logo path {
+  fill: #444444;
+}
+
+.copyright__logo {
+  &:hover path,
+  &:focus path {
+    fill: $green;
+  }
+
+  &:active path {
+    fill: rgba($green, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    margin-right: 20px;
+  }
 }
