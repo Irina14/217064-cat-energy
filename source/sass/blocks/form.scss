@@ -226,11 +226,12 @@
 
 .form__field {
   width: 170px;
-  line-height: 16px;
-  padding: 10px 15px 10px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
 
   &:focus {
-    padding: 9px 14px 9px;
+    padding: 0 14px;
   }
 
   &:focus:invalid {
@@ -276,10 +277,10 @@
   width: 280px;
   height: 150px;
   margin: 0 auto;
-  padding: 13px 12px 13px 15px;
+  padding: 13px 12px;
 
   &:focus {
-    padding: 12px 11px 12px 14px;
+    padding: 12px 11px;
   }
 }
 
@@ -487,11 +488,13 @@
   }
 
   .form__field {
-    padding: 10px 19px 10px;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 19px;
 
     &:focus,
     &--error {
-      padding: 9px 18px 9px;
+      padding: 0 18px;
     }
   }
 
