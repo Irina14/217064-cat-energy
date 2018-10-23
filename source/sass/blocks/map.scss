@@ -2,6 +2,11 @@
   position: relative;
   height: 362px;
   background: $grey url("../img/bg-map-mobile@1x.png") no-repeat center -38px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: auto 362px;
+  }
 }
 
 .map__wrapper {
@@ -36,6 +41,11 @@
   .map {
     height: 396px;
     background: $grey url("../img/bg-map-tablet@1x.png") no-repeat center -5px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+      background-size: auto 396px;
+    }
   }
 
   .map__wrapper {
@@ -61,6 +71,11 @@
   .map {
     background: $grey url("../img/bg-map-desktop@1x.png") no-repeat center top;
     height: 400px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+      background-size: auto 400px;
+    }
   }
 
   .map__wrapper {
