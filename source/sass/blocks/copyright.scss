@@ -16,16 +16,10 @@
   }
 }
 
-.copyright__icon-html {
-  width: 41px;
-  height: 41px;
-  fill: #444444;
-}
-
 .copyright__logo {
   position: absolute;
   right: -7px;
-  top: 18px;
+  top: 19px;
 
   &:hover .copyright__icon-html,
   &:focus .copyright__icon-html {
@@ -35,6 +29,12 @@
   &:active .copyright__icon-html {
     fill: rgba($green, 0.3);
   }
+}
+
+.copyright__icon-html {
+  width: 41px;
+  height: 41px;
+  fill: #444444;
 }
 
 @media (min-width: $tablet-width) {
