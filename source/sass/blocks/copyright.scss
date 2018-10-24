@@ -1,4 +1,5 @@
 .copyright {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -15,22 +16,23 @@
   }
 }
 
-.copyright__logo svg {
-  width: 27px;
-  height: 34px;
-}
-
-.copyright__logo path {
+.copyright__icon-html {
+  width: 41px;
+  height: 41px;
   fill: #444444;
 }
 
 .copyright__logo {
-  &:hover path,
-  &:focus path {
+  position: absolute;
+  right: -7px;
+  top: 18px;
+
+  &:hover .copyright__icon-html,
+  &:focus .copyright__icon-html {
     fill: $green;
   }
 
-  &:active path {
+  &:active .copyright__icon-html {
     fill: rgba($green, 0.3);
   }
 }

@@ -238,7 +238,7 @@
     border: 2px solid #ff8282;
   }
 
-  &:focus:invalid + .form__icon path {
+  &:focus:invalid + .form__icon {
     fill: #ff8282;
   }
 
@@ -246,7 +246,7 @@
     padding-right: 40px;
   }
 
-  &--contacts:focus + .form__icon path {
+  &--contacts:focus + .form__icon {
     fill: $green;
   }
 }
@@ -254,6 +254,7 @@
 .form__icon {
   position: absolute;
   right: 14px;
+  fill: $black-brown;
 
   &--email {
     width: 17px;
@@ -266,10 +267,6 @@
     height: 20px;
     top: calc(50% - 10px);
   }
-}
-
-.form__icon path {
-  fill: $black-brown;
 }
 
 .form__textarea {
