@@ -64,6 +64,7 @@
     }
 
     &--fb {
+      margin: 0;
       width: 14px;
       height: 28px;
     }
@@ -72,12 +73,6 @@
   .social__item {
     &:not(:last-child) {
       margin-right: 25px;
-    }
-  }
-
-  .social__icon  {
-    &--fb {
-      margin: 0;
     }
   }
 }
