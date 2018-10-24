@@ -39,28 +39,32 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 61px 0 57px 0;
+    padding: 55px 0 57px 0;
   }
 
   .footer__logo {
+    width: 162px;
     padding-top: 0;
     padding-bottom: 0;
-    text-align: right;
+    text-align: left;
     border-bottom: none;
   }
 
   .footer__wrapper-social {
+    width: 324px;
+    padding: 0;
     border-bottom: none;
   }
 
   .footer__social {
+    width: auto;
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
   }
 
   .footer__copyright {
-    width: auto;
+    width: 162px;
     margin: 0;
     padding-top: 0;
     padding-bottom: 0;
