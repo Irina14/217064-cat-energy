@@ -7,6 +7,10 @@
 .page-main__background {
   background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .page-main__wrapper-text {
