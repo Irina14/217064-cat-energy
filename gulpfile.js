@@ -40,7 +40,8 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("sprite", function () {
@@ -85,7 +86,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-{vk,inst,fb,html,email,tel}.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
