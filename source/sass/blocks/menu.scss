@@ -107,6 +107,7 @@
 
     &:not(:last-child) {
       margin-right: 35px;
+      border-bottom: none;
     }
 
     &--active::after {

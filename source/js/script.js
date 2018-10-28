@@ -1,5 +1,5 @@
 var menu = document.querySelector('.menu');
-// var menuToggle = document.querySelector('.menu__toggle');
+var menuToggle = document.querySelector('.menu__toggle');
 
 menu.classList.remove('menu--nojs');
 

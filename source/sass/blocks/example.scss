@@ -112,15 +112,17 @@
 }
 
 .example__slider-bar {
+  @include container($mobile-content);
   position: relative;
   display: flex;
   justify-content: center;
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .example__slider-scale {
   position: absolute;
   top: 3px;
+  left: 99px;
   width: 84px;
   height: 14px;
   background-color: $white;
@@ -131,7 +133,7 @@
 .example__control {
   position: absolute;
   top: 3px;
-  left: 6px;
+  left: 5px;
   width: 35px;
   height: 6px;
   background-color: $green;
@@ -300,7 +302,8 @@
   .example__slider-bar {
     width: 570px;
     z-index: 2;
-    margin: -94px auto 0 auto;
+    margin: -94px auto 0;
+    padding-left: 0;
   }
 
   .example__slider-button {
@@ -324,7 +327,7 @@
 
   .example__slider-scale {
     top: 7px;
-    left: calc(50% - 214px);
+    left: 71px;
     width: 428px;
     height: 6px;
     background-color: #dcdcdc;
