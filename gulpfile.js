@@ -60,9 +60,13 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(gulp.dest("build"))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
+    }))
+    .pipe(rename(function (path) {
+      path.basename += ".min";
     }))
     .pipe(gulp.dest("build"));
 });
