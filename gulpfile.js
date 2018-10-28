@@ -60,11 +60,6 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
-});
-
-gulp.task('htmlmin', function() {
-  return gulp.src("source/*.html")
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -105,7 +100,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/icon-{vk,inst,fb,html,email,tel}.svg", gulp.series("sprite", "html", "htmlmin", "refresh"));
+  gulp.watch("source/img/icon-{vk,inst,fb,html,email,tel}.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("script", "refresh"));
 });
@@ -115,5 +110,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "htmlmin", "script"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "script"));
 gulp.task("start", gulp.series("build", "server"));
