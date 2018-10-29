@@ -232,15 +232,21 @@
   line-height: 45px;
   padding: 0 15px;
 
-  &:focus {
+  &:focus,
+  &--error {
     padding: 0 14px;
   }
 
-  &:focus:invalid {
+  &--error,
+  &--error:hover {
     border: 2px solid #ff8282;
   }
 
-  &:focus:invalid + .form__icon {
+  &--error:focus {
+    border: 2px solid #444444;
+  }
+
+  &--error + .form__icon {
     fill: #ff8282;
   }
 
