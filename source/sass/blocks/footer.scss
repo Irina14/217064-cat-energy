@@ -34,7 +34,7 @@
 
 .footer__copyright {
   @include container($mobile-content);
-  padding: 31px 0;
+  padding: 15px 0 18px;
 }
 
 @media (min-width: $tablet-width) {
@@ -43,7 +43,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 56px 0;
+    padding: 51px 0;
   }
 
   .footer__logo {

@@ -1,5 +1,4 @@
 .copyright {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -17,9 +16,8 @@
 }
 
 .copyright__logo {
-  position: absolute;
-  right: -7px;
-  top: 19px;
+  margin-right: -7px;
+  padding-top: 3px;
 
   &:hover .copyright__icon-html,
   &:focus .copyright__icon-html {
@@ -41,14 +39,4 @@
   width: 41px;
   height: 41px;
   fill: #444444;
-}
-
-@media (min-width: $tablet-width) {
-  .copyright__link {
-    padding-right: 47px;
-  }
-
-  .copyright__logo {
-    top: -12px;
-  }
 }
