@@ -5,7 +5,7 @@
 .additional-goods__title {
   @include title(24px, 24px);
   display: flex;
-  padding: 29px 0 32px 0;
+  padding: 29px 0 33px 0;
 
   &::before,
   &::after {
@@ -41,7 +41,7 @@
 }
 
 .additional-goods__item {
-  padding-top: 14px;
+  padding-top: 13px;
   padding-bottom: 17px;
   border-bottom: 1px solid $dark-grey;
 
@@ -71,7 +71,7 @@
 .additional-goods__action {
   position: relative;
   height: 289px;
-  margin-top: 37px;
+  margin-top: 39px;
   padding-top: 187px;
   text-align: center;
   background: $green url("../img/gift-photo-mobile@1x.jpg") no-repeat center top;
@@ -149,7 +149,7 @@
     justify-content: space-between;
     margin-top: -1px;
     padding: 25px 38px 27px 38px;
-    border: 1px solid rgba(205, 205, 205, 0.5);
+    border: 1px solid rgba($dark-grey, 0.5);
   }
 
   .additional-goods__caption {

@@ -9,7 +9,7 @@
 .contacts__wrapper-text {
   @include container($mobile-content);
   display: flex;
-  padding-top: 29px;
+  padding-top: 28px;
   padding-bottom: 25px;
 }
 
@@ -66,11 +66,8 @@
     top: 95px;
     left: 0;
     z-index: 2;
-    padding-right: 90px;
-    padding-left: 76px;
     width: 570px;
-    padding-top: 65px;
-    padding-bottom: 60px;
+    padding: 65px 90px 60px 76px;
     background-color: $white;
   }
 
