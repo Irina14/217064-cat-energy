@@ -93,8 +93,8 @@
   background: url("../img/icon-tick.svg") no-repeat;
 }
 
-.form__field-group input[type="radio"]:hover + .form__label::before,
-.form__field-group input[type="checkbox"]:hover + .form__label::before {
+.form__field-group input[type="radio"] + .form__label:hover::before,
+.form__field-group input[type="checkbox"] + .form__label:hover::before {
   border-color: #bababa;
 }
 
