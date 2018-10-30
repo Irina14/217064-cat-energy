@@ -11,7 +11,7 @@
 
 .example__title {
   @include title(36px, 36px);
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .example__desc {
@@ -22,10 +22,9 @@
 
 .example__list {
   @include reset-list;
-  width: 280px;
+  @include container($mobile-content);
   position: relative;
-  margin: 0 auto;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   &::before,
   &::after {
@@ -112,15 +111,17 @@
 }
 
 .example__slider-bar {
+  @include container($mobile-content);
   position: relative;
   display: flex;
   justify-content: center;
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .example__slider-scale {
   position: absolute;
   top: 3px;
+  left: 99px;
   width: 84px;
   height: 14px;
   background-color: $white;
@@ -131,7 +132,7 @@
 .example__control {
   position: absolute;
   top: 3px;
-  left: 6px;
+  left: 5px;
   width: 35px;
   height: 6px;
   background-color: $green;
@@ -266,17 +267,17 @@
       left: calc(50% - 338px);
       width: 338px;
       overflow: hidden;
-    }
 
-    &--before::after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 160px;
-      background-color: $white;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        background-color: $white;
+      }
     }
   }
 
@@ -300,7 +301,8 @@
   .example__slider-bar {
     width: 570px;
     z-index: 2;
-    margin: -94px auto 0 auto;
+    margin: -94px auto 0;
+    padding-left: 0;
   }
 
   .example__slider-button {
@@ -318,13 +320,17 @@
     }
 
     &:active {
-      border-bottom: none;
+      border-bottom-color: transparent;
     }
+  }
+
+  .example__slider-button span {
+    position: relative;
   }
 
   .example__slider-scale {
     top: 7px;
-    left: calc(50% - 214px);
+    left: 71px;
     width: 428px;
     height: 6px;
     background-color: #dcdcdc;
@@ -427,17 +433,17 @@
 
     &--before {
       width: 355px;
-    }
 
-    &--before::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 462px;
-      background-color: $grey;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 462px;
+        background-color: $grey;
+      }
     }
   }
 

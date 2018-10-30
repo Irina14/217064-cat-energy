@@ -10,15 +10,20 @@
 .menu__item {
   padding: 22px 20px 23px;
   text-align: center;
-  border-bottom: 1px solid #e6e6e6;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6;
+  }
 
   &:first-child {
     border-top: 1px solid #e6e6e6;
   }
 }
 
-.menu--opened .menu__item:last-child {
-  border-bottom: none;
+.menu--opened .menu__item {
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .menu__link {
@@ -34,25 +39,29 @@
   height: 18px;
 }
 
-.menu--closed .menu__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background-color: $black-brown;
-  box-shadow: 0 8px 0 0 $black-brown, 0 16px 0 0 $black-brown;
+.menu--closed .menu__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $black-brown;
+    box-shadow: 0 8px 0 0 $black-brown, 0 16px 0 0 $black-brown;
+  }
 }
 
-.menu--opened .menu__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 3px;
-  width: 18px;
-  height: 18px;
-  background: url("../img/icon-close.svg") no-repeat;
+.menu--opened .menu__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/icon-close.svg") no-repeat;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -104,16 +113,19 @@
 
     &:not(:last-child) {
       margin-right: 35px;
+      border-bottom: none;
     }
 
-    &--active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 33px;
-      width: 100%;
-      height: 2px;
-      background-color: $green;
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 33px;
+        width: 100%;
+        height: 2px;
+        background-color: $green;
+      }
     }
   }
 
@@ -148,23 +160,25 @@
   }
 
   .menu__list--index .menu__item {
-    &--active::after {
-      background-color: $white;
+    &--active {
+      &::after {
+        background-color: $white;
+      }
     }
   }
 
   .menu__link--index {
     color: $white;
-  }
 
-  .menu__link--index[href] {
-    &:hover,
-    &:focus {
-      color: rgba($white, 0.6);
-    }
+    &[href] {
+      &:hover,
+      &:focus {
+        color: rgba($white, 0.6);
+      }
 
-    &:active {
-      color: rgba($white, 0.3);
+      &:active {
+        color: rgba($white, 0.3);
+      }
     }
   }
 }

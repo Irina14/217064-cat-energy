@@ -96,8 +96,8 @@
   box-shadow: 0 0 0 1px #bababa;
 }
 
-.form__field-group input[type="radio"]:disabled + .form__label,
-.form__field-group input[type="checkbox"]:disabled + .form__label {
+.form__field-group input[type="radio"]:active + .form__label,
+.form__field-group input[type="checkbox"]:active + .form__label {
   opacity: 0.3;
 }
 
@@ -155,9 +155,11 @@
     width: 185px;
   }
 
-  &--comment::after {
-    width: 158px;
-    margin-left: 20px;
+  &--comment {
+    &::after {
+      width: 158px;
+      margin-left: 20px;
+    }
   }
 
   &--comment span {
@@ -166,11 +168,11 @@
 
   &--additionally {
     margin-bottom: 40px;
-  }
 
-  &--additionally::after {
-    width: 137px;
-    margin-left: 23px;
+    &::after {
+      width: 137px;
+      margin-left: 23px;
+    }
   }
 
   &--additionally span {
@@ -230,15 +232,21 @@
   line-height: 45px;
   padding: 0 15px;
 
-  &:focus {
+  &:focus,
+  &--error {
     padding: 0 14px;
   }
 
-  &:focus:invalid {
+  &--error,
+  &--error:hover {
     border: 2px solid #ff8282;
   }
 
-  &:focus:invalid + .form__icon {
+  &--error:focus {
+    border: 2px solid #444444;
+  }
+
+  &--error + .form__icon {
     fill: #ff8282;
   }
 
@@ -369,24 +377,24 @@
 
     &--task {
       padding-left: 86px;
+
+      &::before {
+        top: -8px;
+        left: 27px;
+        width: 38px;
+        height: 38px;
+      }
     }
 
     &--additionally {
       padding-left: 58px;
-    }
 
-    &--task::before {
-      top: -8px;
-      left: 27px;
-      width: 38px;
-      height: 38px;
-    }
-
-    &--additionally::before {
-      top: -10px;
-      left: 0;
-      width: 39px;
-      height: 39px;
+      &::before {
+        top: -10px;
+        left: 0;
+        width: 39px;
+        height: 39px;
+      }
     }
 
     &--email {
@@ -434,7 +442,7 @@
     }
 
     &::after {
-      width: 140px;
+      width: 136px;
       margin-left: 35px;
     }
 
@@ -442,8 +450,10 @@
       width: 520px;
     }
 
-    &--comment::after {
-      width: 469px;
+    &--comment {
+      &::after {
+        width: 469px;
+      }
     }
 
     &--comment span {
@@ -451,11 +461,11 @@
     }
 
     &--additionally {
-      margin-bottom: 70px;
-    }
+      margin-bottom: 68px;
 
-    &--additionally::after {
-      width: 436px;
+      &::after {
+        width: 436px;
+      }
     }
 
     &--additionally span {
@@ -465,7 +475,7 @@
 
   .form__field-group {
     &--about-cat {
-      margin-bottom: 74px;
+      margin-bottom: 73px;
     }
 
     &--task {
@@ -594,16 +604,18 @@
       width: 698px;
     }
 
-    &--comment::after {
-      width: 1033px;
+    &--comment {
+      &::after {
+        width: 1033px;
+      }
     }
 
     &--additionally {
       margin-bottom: 68px;
-    }
 
-    &--additionally::after {
-      width: 1003px;
+      &::after {
+        width: 1003px;
+      }
     }
   }
 
@@ -632,7 +644,7 @@
     }
 
     &--additionally {
-      margin-bottom: 19px;
+      margin-bottom: 17px;
     }
   }
 
@@ -657,14 +669,14 @@
     &--additionally {
       width: 245px;
       margin-bottom: 20px;
-    }
 
-    &--additionally:not(:nth-child(2n)) {
-      margin-right: 0;
-    }
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
 
-    &--additionally:not(:last-child) {
-      margin-right: 80px;
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
     }
   }
 

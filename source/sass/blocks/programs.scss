@@ -27,24 +27,28 @@
     border-radius: 50%;
   }
 
-  &--slim::after {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 30px;
-    width: 35px;
-    height: 49px;
-    background: url("../img/icon-cat-slim.svg") no-repeat;
+  &--slim {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 30px;
+      width: 35px;
+      height: 49px;
+      background: url("../img/icon-cat-slim.svg") no-repeat;
+    }
   }
 
-  &--pro::after {
-    content: "";
-    position: absolute;
-    top: 35px;
-    left: 13px;
-    width: 67px;
-    height: 28px;
-    background: url("../img/icon-cat-pro.svg") no-repeat;
+  &--pro {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 13px;
+      width: 67px;
+      height: 28px;
+      background: url("../img/icon-cat-pro.svg") no-repeat;
+    }
   }
 }
 
@@ -58,7 +62,7 @@
 .programs__desc {
   margin: 0;
   margin-bottom: 19px;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -113,24 +117,24 @@
 
     &--slim {
       padding-right: 280px;
-    }
 
-    &--slim::after {
-      top: 80px;
-      left: 476px;
-      width: 140px;
-      height: 194px;
+      &::after {
+        top: 80px;
+        left: 476px;
+        width: 140px;
+        height: 194px;
+      }
     }
 
     &--pro {
       padding-right: 312px;
-    }
 
-    &--pro::after {
-      top: 135px;
-      left: 412px;
-      width: 268px;
-      height: 112px;
+      &::after {
+        top: 135px;
+        left: 412px;
+        width: 268px;
+        height: 112px;
+      }
     }
   }
 
@@ -188,24 +192,24 @@
 
     &--slim {
       padding-right: 52px;
-    }
 
-    &--slim::after {
-      top: 41px;
-      left: 66px;
-      width: 70px;
-      height: 97px;
+      &::after {
+        top: 41px;
+        left: 66px;
+        width: 70px;
+        height: 97px;
+      }
     }
 
     &--pro {
       padding-right: 52px;
-    }
 
-    &--pro::after {
-      top: 69px;
-      left: 34px;
-      width: 134px;
-      height: 56px;
+      &::after {
+        top: 69px;
+        left: 34px;
+        width: 134px;
+        height: 56px;
+      }
     }
   }
 
