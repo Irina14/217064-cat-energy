@@ -53,52 +53,34 @@
     position: relative;
     padding-left: 45px;
     cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $dark-grey;
+    }
   }
 
-  &--task::before,
-  &--additionally::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
-  }
-
-  &--task::before {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px $dark-grey;
-    box-sizing: content-box;
-  }
-
-  &--additionally::before {
-    width: 30px;
-    height: 30px;
-    border: 1px solid $dark-grey;
+  &--task {
+    &::before {
+      border-radius: 50%;
+    }
   }
 }
 
-.form__field-group input[type="radio"]:checked + .form__label::before {
+.form__field-group input[type="radio"]:checked + .form__label::after {
   content: "";
   position: absolute;
-  top: -5px;
-  left: 0;
+  top: 4px;
+  left: 9px;
   width: 12px;
   height: 12px;
   background-color: $green;
-  border: 8px solid $white;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px $dark-grey;
-  box-sizing: content-box;
-}
-
-.form__field-group input[type="radio"]:hover + .form__label::before {
-  box-shadow: 0 0 0 1px #bababa;
-}
-
-.form__field-group input[type="radio"]:active + .form__label,
-.form__field-group input[type="checkbox"]:active + .form__label {
-  opacity: 0.3;
 }
 
 .form__field-group input[type="checkbox"]:checked + .form__label::after {
@@ -111,14 +93,14 @@
   background: url("../img/icon-tick.svg") no-repeat;
 }
 
+.form__field-group input[type="radio"]:hover + .form__label::before,
 .form__field-group input[type="checkbox"]:hover + .form__label::before {
-  border: 1px solid #bababa;
+  border-color: #bababa;
 }
 
-.form__field-group input[type="radio"]:focus + label::before,
-.form__field-group input[type="checkbox"]:focus + label::before {
-  border: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+.form__field-group input[type="radio"]:focus + .form__label,
+.form__field-group input[type="checkbox"]:focus + .form__label {
+  opacity: 0.3;
 }
 
 .form__label sup {
@@ -375,14 +357,20 @@
     @include text(20px, 20px, $black-brown);
     margin-right: 17px;
 
+    &--task,
+    &--additionally {
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
     &--task {
       padding-left: 86px;
 
       &::before {
         top: -8px;
         left: 27px;
-        width: 38px;
-        height: 38px;
       }
     }
 
@@ -392,8 +380,6 @@
       &::before {
         top: -10px;
         left: 0;
-        width: 39px;
-        height: 39px;
       }
     }
 
@@ -406,6 +392,18 @@
     }
   }
 
+  .form__field-group input[type="radio"]:checked + .form__label::after {
+    top: 3px;
+    left: 38px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__field-group input[type="checkbox"]:checked + .form__label::after {
+    top: 2px;
+    left: 10px;
+  }
+
   .form__icon {
     right: 55px;
   }
@@ -413,18 +411,6 @@
   .form__label sup {
     top: -0.05em;
     font-size: 100%;
-  }
-
-  .form__field-group input[type="radio"]:checked + .form__label::before {
-    top: -8px;
-    left: 27px;
-    width: 18px;
-    height: 18px;
-    border: 10px solid $white;
-  }
-
-  .form__field-group input[type="checkbox"]:checked + .form__label::after {
-    left: 9px;
   }
 
   .form__legend {
