@@ -1,26 +1,37 @@
 .page-main__header {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
-}
 
-.page-main__background {
-  background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
-  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    height: 305px;
+    background: $green url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+    background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
 .page-main__wrapper-text {
   @include container($mobile-content);
+  position: relative;
+  z-index: 1;
   min-height: 305px;
   padding-top: 26px;
   text-align: center;
 }
 
 .page-main__wrapper-desc {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,10 +86,10 @@
     @include container($table-content);
     align-items: flex-start;
     margin-bottom: 0;
-  }
 
-  .page-main__background {
-    background: none;
+    &::before {
+      display: none;
+    }
   }
 
   .page-main__wrapper-text {
@@ -86,7 +97,7 @@
     padding-left: 90px;
     padding-right: 0;
     padding-top: 30px;
-    margin-bottom: 48px;
+    margin: 0 0 48px;
     text-align: left;
     background: none;
   }
