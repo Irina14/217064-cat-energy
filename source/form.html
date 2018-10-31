@@ -26,7 +26,7 @@
           </a>
         </div>
         <nav class="menu menu--closed menu--nojs">
-          <button class="menu__toggle" type="button" aria-label="Открыть меню"></button>
+          <button class="menu__toggle" type="button" aria-label="Открыть и закрыть меню"></button>
           <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__link" href="index.html">Главная</a>
@@ -90,12 +90,12 @@
               <div class="form__wrapper form__wrapper--contacts">
                 <label class="form__label form__label--contacts form__label--email" for="email-field">E-mail:<sup>*</sup></label>
                 <input class="form__field form__field--contacts" type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
-                <svg class="form__icon form__icon--email" width="17" height="13"><use xlink:href="#icon-email"></use></svg>
+                <svg class="form__icon form__icon--email" width="17" height="13" aria-hidden="true" role="presentation"><use xlink:href="#icon-email"></use></svg>
               </div>
               <div class="form__wrapper form__wrapper--contacts">
                 <label class="form__label form__label--contacts form__label--tel" for="tel-field">Телефон:<sup>*</sup></label>
                 <input class="form__field form__field--contacts" type="tel" name="tel" id="tel-field" placeholder="8 (960) 900-60-90">
-                <svg class="form__icon form__icon--tel" width="20" height="20"><use xlink:href="#icon-tel"></use></svg>
+                <svg class="form__icon form__icon--tel" width="20" height="20" aria-hidden="true" role="presentation"><use xlink:href="#icon-tel"></use></svg>
               </div>
             </div>
           </fieldset>
@@ -176,7 +176,7 @@
         </div>
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
             <svg class="copyright__icon-html" width="41" height="41"><use xlink:href="#icon-html"></use></svg>
           </a>
         </div>
